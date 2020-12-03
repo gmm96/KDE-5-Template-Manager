@@ -39,3 +39,6 @@ comment is optional.
 
 ![Created successfully](screenshots/5.png "Created successfully")
 
+![Template example](screenshots/6.png "Template example")
+
+
