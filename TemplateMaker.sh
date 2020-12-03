@@ -1,10 +1,5 @@
 #!/bin/bash
 
-function cancel_operation {
-	kdialog --error "Operation cancelled by user.";
-	exit 1;
-}
-
 if [ "$#" -ne 1 ]; then
     echo "Error: Illegal number of parameters."
     echo "Use: sh $0 <file>"
@@ -14,6 +9,11 @@ fi
 filename=$(basename -- "$1");
 extension="${filename##*.}";
 shortname="${filename%%.*}";
+
+function cancel_operation {
+	kdialog --error "Operation cancelled by user.";
+	exit 1;
+}
 
 templatename=$(kdialog --inputbox "Please, enter template name.<br> If empty, it'll take the original filename." $shortname --title "Template maker");
 if [ $? -eq 1 ]
@@ -44,4 +44,4 @@ Type=Link
 URL=source/$templatename.$extension
 Icon=$templateicon" > "$HOME/Templates/$templatename.desktop";
 
-kdialog --msgbox "Template created successfully as '$templatename'.":
+kdialog --msgbox "Template created successfully as '$templatename'":
