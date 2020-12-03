@@ -15,7 +15,7 @@ function cancel_operation {
 	exit 1;
 }
 
-templatename=$(kdialog --inputbox "Please, enter template name.<br> If empty, it'll take the original filename." $shortname --title "Template maker");
+templatename=$(kdialog --inputbox "Please, enter template name.<br> If empty, it'll take the original filename." "$shortname" --title "Template maker");
 if [ $? -eq 1 ]
 then
 	cancel_operation;
@@ -36,7 +36,7 @@ then
 	cancel_operation;
 fi
 
-cp $1 "$HOME/Templates/source/$templatename.$extension";
+cp "$1" "$HOME/Templates/source/$templatename.$extension";
 echo "[Desktop Entry]
 Name=$templatename
 Comment=$templatecomment
