@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=all/allfiles
+Actions=TemplateMaker;
+X-KDE-Priority=TopLevel
+X-KDE-StartupNotify=false
+Icon=template
+
+[Desktop Action TemplateMaker]
+Name=Make template from this file...
+Name[es]=Crear plantilla a partir de este archivo...
+Icon=template
+Exec=sh $HOME/.bin/TemplateMaker.sh %f
