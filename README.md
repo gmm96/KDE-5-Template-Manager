@@ -29,10 +29,17 @@ If you don't like it, you can **uninstall** it by running:
 
 ## Usage
 
-It is quite easy to use this plugin. Just select the file you want to use as template, do right 
+It is quite easy to use this plugin. Just select the file you want to use as template, do right-
 click and choose the option *Manage template(s)* -> *Create template...*. Then enter the info asked by the
 dialogs that will appear and everything should be ok. Parameters name and icon are required, but
 comment is optional.
+
+You can also delete templates created with this tool. You just have to do right-click and select 
+*Manage template(s)* -> *Remove existing template(s)*. Then, a windows will prompt with all the 
+templates, where you can select as many as you want to remove. Finally, confirm, and they will be deleted. 
+
+It is not recommended removing previous templates you kept in your disk before you first installed this plugin 
+using the template eraser tool, as some bugs may appear and deletion may not work.
 
 ![Dolphin Service Menu](screenshots/1.png "Dolphin Service Menu")
 
