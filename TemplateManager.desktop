@@ -1,0 +1,40 @@
+[Desktop Entry]
+Name=KDE 5 Template Manager Plugin
+Icon=favorite
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin;
+X-KDE-ServiceTypes=KonqPopupMenu/Plugin
+MimeType=all/allfiles;inode/directory;
+Actions=TemplateCreator;TemplateEraser;
+X-KDE-Priority=TopLevel
+X-KDE-StartupNotify=false
+X-KDE-Submenu=Manage template(s)
+X-KDE-Submenu[es]=Gestionar plantilla(s)
+X-KDE-Submenu[fr]=Gérer modèle(s)
+X-KDE-Submenu[it]=Gestire i modello(i)
+X-KDE-Submenu[de]=Vorlagen (n) verwalten
+X-KDE-Submenu[pt]=Gerenciar modelo(s)
+X-KDE-Submenu[ru]=управлять шаблон(ы)
+Encoding=UTF-8
+
+[Desktop Action TemplateCreator]
+Name=Create template...
+Name[es]=Crear plantilla...
+Name[fr]=Créer un modèle...
+Name[it]=Crea modello...
+Name[de]=Vorlage erstellen...
+Name[pt]=Criar modelo...
+Name[ru]=Создать шаблон...
+Icon=xapp-favorite-symbolic
+Exec=sh $HOME/.bin/TemplateCreator.sh %f
+
+[Desktop Action TemplateEraser]
+Name=Remove existing template(s)
+Name[es]=Eliminar plantilla(s) existente(s)
+Name[fr]=Supprimer les modèle(s) existant(s)
+Name[it]=Rimuovi modello/i esistenti
+Name[de]=Vorhandene Vorlage (en) entfernen
+Name[pt]=Remover modelo(s) existente(s)
+Name[ru]=Удалить существующие шаблон(ы)
+Icon=delete
+Exec=sh $HOME/.bin/TemplateEraser.sh
