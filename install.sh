@@ -29,6 +29,9 @@ case "${lang_arr[0]:0:2}" in
   "ru")
     success="Плагин KDE 5 Template Manager успешно установлен."
     ;;
+   "nl")
+    success="De KDE 5-sjabloonbeheerplug-in is geïnstalleerd."
+    ;;
   *)
     success="KDE 5 Template Manager Plugin successfully installed."
     ;;
