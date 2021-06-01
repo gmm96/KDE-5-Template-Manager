@@ -24,6 +24,9 @@ case "${lang_arr[0]:0:2}" in
   "ru")
     confirmation_msg="Вы также хотите удалить существующие шаблоны? Это действие не может быть отменено."
     ;;
+    "nl")
+    confirmation_msg="Wilt u tevens de reeds gemaakte sjablonen verwijderen? Dit kan niet ongedaan worden gemaakt."
+    ;;
   *)
     confirmation_msg="Do you also want to remove the existing templates? This action cannot be undone."
     ;;
@@ -51,6 +54,9 @@ case "${lang_arr[0]:0:2}" in
     ;;
   "ru")
     success="Плагин KDE 5 Template Manager успешно установлен."
+    ;;
+  "nl")
+    success="De KDE 5-sjabloonbeheerplug-in is verwijderd."
     ;;
   *)
     success="KDE 5 Template Manager Plugin successfully uninstalled."
