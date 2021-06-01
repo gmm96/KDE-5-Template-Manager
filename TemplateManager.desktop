@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=KDE 5 Template Manager Plugin
+Name[nl]=KDE 5-sjabloonbeheerplug-in
 Icon=favorite
 Type=Service
 ServiceTypes=KonqPopupMenu/Plugin;
@@ -15,6 +16,7 @@ X-KDE-Submenu[it]=Gestire i modello(i)
 X-KDE-Submenu[de]=Vorlagen (n) verwalten
 X-KDE-Submenu[pt]=Gerenciar modelo(s)
 X-KDE-Submenu[ru]=управлять шаблон(ы)
+X-KDE-Submenu[nl]=Sjablonen beheren
 Encoding=UTF-8
 
 [Desktop Action TemplateCreator]
@@ -25,6 +27,7 @@ Name[it]=Crea modello...
 Name[de]=Vorlage erstellen...
 Name[pt]=Criar modelo...
 Name[ru]=Создать шаблон...
+Name[nl]=Sjabloon maken…
 Icon=xapp-favorite-symbolic
 Exec=sh $HOME/.bin/TemplateCreator.sh %f
 
@@ -36,5 +39,6 @@ Name[it]=Rimuovi modello/i esistenti
 Name[de]=Vorhandene Vorlage (en) entfernen
 Name[pt]=Remover modelo(s) existente(s)
 Name[ru]=Удалить существующие шаблон(ы)
+Name[nl]=Gemaakte sjablonen verwijderen
 Icon=delete
 Exec=sh $HOME/.bin/TemplateEraser.sh
