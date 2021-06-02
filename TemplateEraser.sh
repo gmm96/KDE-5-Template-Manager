@@ -26,6 +26,9 @@ function cancel_operation() {
     "ru")
       cancel_msg="Операция отменена пользователем."
       ;;
+    "nl")
+      cancel_msg="De handeling is afgebroken door de gebruiker."
+      ;;
     *)
       cancel_msg="Operation cancelled by user."
       ;;
@@ -54,6 +57,9 @@ function no_templates() {
       ;;
     "ru")
       no_templates_msg="Нет доступных шаблонов."
+      ;;
+    "nl")
+      no_templates_msg="Er zijn geen sjablonen beschikbaar."
       ;;
     *)
       no_templates_msg="There are no available templates."
@@ -84,6 +90,9 @@ function get_select_templates_msg() {
     "ru")
       select="Выберите шаблон (ы), который вы хотите удалить:"
       ;;
+    "nl")
+      select="Selecteer één of meerdere te verwijderen sjablonen."
+      ;;
     *)
       select="Select the template(s) you desire to remove:"
       ;;
@@ -112,6 +121,9 @@ function get_confirmation_msg() {
     "ru")
       confirmation="Вы уверены, что хотите удалить следующие шаблоны? Это действие нельзя отменить.<br>"
       ;;
+     "nl")
+      confirmation="Weet u zeker dat u de volgende sjablonen wilt verwijderen? Dit kan niet ongedaan worden gemaakt.<br>"
+      ;;
     *)
       confirmation="Are you sure you want to remove next templates? This action cannot be undone.<br>"
       ;;
@@ -139,6 +151,9 @@ function get_success_msg() {
       ;;
     "ru")
       success="Следующие шаблоны были удалены:<br>"
+      ;;
+    "nl")
+      success="De volgende sjablonen zijn verwijderd:<br>"
       ;;
     *)
       success="Next templates were removed:<br>"

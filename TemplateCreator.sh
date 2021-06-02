@@ -26,6 +26,9 @@ function cancel_operation() {
     "ru")
       cancel_msg="Операция отменена пользователем."
       ;;
+     "nl")
+      cancel_msg="De handeling is afgebroken door de gebruiker."
+      ;;
     *)
       cancel_msg="Operation cancelled by user."
       ;;
@@ -54,6 +57,9 @@ function cannot_template() {
       ;;
     "ru")
       not_template_msg="Невозможно создать шаблон из этого файла или каталога."
+      ;;
+    "nl")
+      not_template_msg="Er kan geen sjabloon worden gemaakt van dit bestand of deze map."
       ;;
     *)
       not_template_msg="Cannot make template from this file or directory."
@@ -84,6 +90,9 @@ function get_name_msg() {
     "ru")
       name="Пожалуйста, введите название шаблона.\nЕсли пусто, будет использовано исходное имя файла."
       ;;
+    "nl")
+      name="Geef het sjabloon een naam.\Laat leeg om de oorspronkelijke bestandsnaam te gebruiken."
+      ;;
     *)
       name="Please, enter a template name.\n If empty, it will take the original filename."
       ;;
@@ -112,6 +121,9 @@ function get_comment_msg() {
     "ru")
       comment="Пожалуйста, введите комментарий к шаблону."
       ;;
+    "nl")
+      comment="Voer een sjabloonopmerking in."
+      ;;
     *)
       comment="Please, enter template comment."
       ;;
@@ -139,6 +151,9 @@ function get_success_msg() {
       ;;
     "ru")
       success="Шаблон успешно создан как "
+      ;;
+    "nl")
+      success="Het sjabloon is aangemaakt als ."
       ;;
     *)
       success="Template created successfully as "
