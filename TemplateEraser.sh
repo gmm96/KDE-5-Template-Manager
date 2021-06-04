@@ -1,17 +1,19 @@
 #!/bin/bash
 
+# shellcheck source=./TemplateManagerLocalization.sh
 . "$HOME/.bin/TemplateManagerLocalization.sh"
+# shellcheck source=./TemplateManagerTools.sh
 . "$HOME/.bin/TemplateManagerTools.sh"
 
 function cancel_operation()
 {
-    kdialog --error "$(str_cancel_operation)" --title "$window_title"
+    kdialog --error "$(str_cancel_operation)" --title "$(str_window_title)"
     exit 1
 }
 
 function no_available_templates()
 {
-    kdialog --error "$(str_no_available_templates)" --title "$window_title"
+    kdialog --error "$(str_no_available_templates)" --title "$(str_window_title)"
     exit 1
 }
 
@@ -45,7 +47,7 @@ for file in "$template_src_folder"/* ; do
     fi
 done
 
-if ! templates_to_remove=$(kdialog --separate-output --checklist "${kdialog_args[@]}" --title "$window_title"); then
+if ! templates_to_remove=$(kdialog --separate-output --checklist "${kdialog_args[@]}" --title "$(str_window_title)"); then
     cancel_operation
 fi
 
@@ -54,7 +56,7 @@ while IFS= read -r file; do
     file_list="$file_list<br>- $file"
 done <<< "$templates_to_remove"
 
-if ! kdialog --warningyesno "$(str_remove_confirmation)$file_list" --title "$window_title"; then
+if ! kdialog --warningyesno "$(str_remove_confirmation)$file_list" --title "$(str_window_title)"; then
     cancel_operation
 fi
 
@@ -62,6 +64,6 @@ while IFS= read -r file; do
     remove_template "$file"
 done <<< "$templates_to_remove"
 
-kdialog --msgbox "$(str_removed_templates)$file_list" --title "$window_title":
+kdialog --msgbox "$(str_removed_templates)$file_list" --title "$(str_window_title)":
 
 # endregion

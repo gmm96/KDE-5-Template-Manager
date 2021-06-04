@@ -2,8 +2,8 @@
 
 template_folder="$HOME/Templates"
 template_src_folder="$HOME/Templates/source"
+
 desktop_ext="desktop"
-window_title="Template Manager"
 
 function get_filename()
 {
