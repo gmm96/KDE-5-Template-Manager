@@ -15,8 +15,10 @@ It also provides functionality to remove previously created templates by this to
 the moment when uninstalling the plugin.
 
 You can template **any file or directory** thanks to this plugin, and it is available in **several languages**: English, 
-Spanish, French, Italian, German, Portuguese, Russian, Czech, Polish, Estonian, Romanian, Finish, Swedish and Norwegian 
-languages. If user language is not in the list, English language will be selected by default. 
+Spanish, French, Italian, German, Portuguese, Russian, Czech, Polish, Estonian, Romanian, Finish, Swedish, Norwegian,
+Turkish, Danish, Ukrainian, Hungarian, Icelandic and Greek languages. Most of them has been translated using Google 
+Translator, so some mistakes may appear in texts. If user language is not in the list, English language will be selected 
+by default. 
 
 If you want to help me to add support for more languages, you are free to create a Pull Request modifying files 
 **TemplateManagerLocalization.sh**, **install.sh** and **uninstall.sh** with the new translations, or you can contact

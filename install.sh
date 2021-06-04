@@ -41,6 +41,18 @@ case "${lang_arr[0]:0:2}" in
         success="KDE 5 Template Manager Plugin har installerats.";;
     "nb" | "nn" | "no")
         success="KDE 5 Template Manager Plugin er installert.";;
+    "tr")
+        success="KDE 5 Template Manager Eklentisi başarıyla kuruldu.";;
+    "uk")
+        success="Плагін KDE 5 Template Manager успішно встановлено.";;
+    "is")
+        success="Tappi KDE 5 sniðmátastjóra var sett upp.";;
+    "el")
+        success="Η προσθήκη KDE 5 Template Manager εγκαταστάθηκε με επιτυχία.";;
+    "hu")
+        success="A KDE 5 Template Manager beépülő modul sikeresen telepítve.";;
+    "da")
+        success="KDE 5 Template Manager Plugin er installeret.";;
     *)
         success="KDE 5 Template Manager Plugin successfully installed.";;
 esac

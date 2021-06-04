@@ -37,6 +37,18 @@ case "${lang_arr[0]:0:2}" in
         confirmation_msg="Vill du också ta bort befintliga mallar? Denna åtgärd kan inte ångras.";;
     "nb" | "nn" | "no")
         confirmation_msg="Vil du også fjerne de eksisterende malene? Denne handlingen kan ikke angres.";;
+    "tr")
+        success="Mevcut şablonları da kaldırmak istiyor musunuz? Bu işlem geri alınamaz.";;
+    "uk")
+        success="Ви також хочете видалити існуючі шаблони? Цю дію не можна скасувати.";;
+    "is")
+        success="Viltu líka fjarlægja núverandi sniðmát? Ekki er hægt að afturkalla þessa aðgerð.";;
+    "el")
+        success="Θέλετε επίσης να καταργήσετε τα υπάρχοντα πρότυπα; Αυτή η πράξη δε μπορεί να αναιρεθεί.";;
+    "hu")
+        success="El akarja távolítani a meglévő sablonokat is? Ez a művelet nem visszavonható.";;
+    "da")
+        success="Vil du også fjerne de eksisterende skabeloner? Denne handling kan ikke fortrydes.";;
     *)
         confirmation_msg="Do you also want to remove the existing templates? This action cannot be undone.";;
 esac
@@ -74,6 +86,18 @@ case "${lang_arr[0]:0:2}" in
         success="Plugin-programmet KDE 5 Template Manager avinstallerades.";;
     "nb" | "nn" | "no")
         success="KDE 5 Template Manager Plugin ble avinstallert.";;
+    "tr")
+        success="KDE 5 Template Manager Eklentisi başarıyla kaldırıldı.";;
+    "uk")
+        success="Ви Плагін KDE 5 Template Manager успішно видалено.";;
+    "is")
+        success="Tappi KDE 5 sniðmátsstjóra tókst að fjarlægja.";;
+    "el")
+        success="Η εγκατάσταση του KDE 5 Template Manager απεγκαταστάθηκε με επιτυχία.";;
+    "hu")
+        success="A KDE 5 Template Manager beépülő modul sikeresen eltávolítva.";;
+    "da")
+        success="KDE 5 Template Manager Plugin blev afinstalleret.";;
     *)
         success="KDE 5 Template Manager Plugin successfully uninstalled.";;
 esac

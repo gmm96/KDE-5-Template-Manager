@@ -33,6 +33,18 @@ function str_window_title() {
             echo "Mallchef";;
         "nb" | "nn" | "no")
             echo "Malansvarlig";;
+        "tr")
+            echo "Şablon yöneticisi";;
+        "uk")
+            echo "Менеджер шаблонів";;
+        "is")
+            echo "Sniðmátastjóri";;
+        "el")
+            echo "Διαχειριστής προτύπων";;
+        "hu")
+            echo "Sablonkezelő";;
+        "da")
+            echo "Skabelonadministrator";;
         *)
             echo "Template manager";;
     esac
@@ -71,6 +83,18 @@ function str_cancel_operation()
             echo "Åtgärden avbröts av användaren.";;
         "nb" | "nn" | "no")
             echo "Operasjonen avbrutt av brukeren.";;
+        "tr")
+            echo "İşlem kullanıcı tarafından iptal edildi.";;
+        "uk")
+            echo "Операцію скасовано користувачем.";;
+        "is")
+            echo "Aðgerð hætt við af notanda.";;
+        "el")
+            echo "Η λειτουργία ακυρώθηκε από τον χρήστη.";;
+        "hu")
+            echo "A műveletet a felhasználó törölte.";;
+        "da")
+            echo "Drift annulleret af brugeren.";;
         *)
             echo "Operation cancelled by user.";;
     esac
@@ -107,6 +131,18 @@ function str_cannot_template()
             echo "Det går inte att skapa mall från den här filen eller katalogen.";;
         "nb" | "nn" | "no")
             echo "Kan ikke lage mal fra denne filen eller katalogen.";;
+        "tr")
+            echo "Bu dosya veya dizinden şablon oluşturulamıyor.";;
+        "uk")
+            echo "Не вдається створити шаблон із цього файлу або каталогу.";;
+        "is")
+            echo "Get ekki búið til sniðmát úr þessari skrá eða möppu.";;
+        "el")
+            echo "Δεν είναι δυνατή η δημιουργία προτύπου από αυτό το αρχείο ή κατάλογο.";;
+        "hu")
+            echo "Nem lehet sablont készíteni ebből a fájlból vagy könyvtárból.";;
+        "da")
+            echo "Kan ikke oprette skabelon fra denne fil eller bibliotek.";;
         *)
             echo "Cannot make template from this file or directory.";;
     esac
@@ -143,6 +179,18 @@ function str_get_name()
             echo "Ange ett mallnamn.<br>Om det är tomt tar det ursprungliga filnamnet.";;
         "nb" | "nn" | "no")
             echo "Vennligst skriv inn et malnavn.<br>Hvis det er tomt, tar det det originale filnavnet.";;
+        "tr")
+            echo "Lütfen bir şablon adı girin.<br>Boşsa, orijinal dosya adını alacaktır.";;
+        "uk")
+            echo "Будь ласка, введіть назву шаблону.<br>Якщо пусте, воно буде мати оригінальне ім’я файлу.";;
+        "is")
+            echo "Vinsamlegast sláðu inn heiti sniðmáts.<br>Ef það er autt tekur það upprunalega skráarheitið.";;
+        "el")
+            echo "Εισαγάγετε ένα όνομα προτύπου.<br>Εάν είναι κενό, θα πάρει το αρχικό όνομα αρχείου.";;
+        "hu")
+            echo "Kérjük, írja be a sablon nevét.<br>Ha üres, akkor az eredeti fájlnév lesz.";;
+        "da")
+            echo "Indtast venligst et skabelonnavn.<br>Hvis det er tomt, tager det det originale filnavn.";;
         *)
             echo "Please, enter a template name.<br>If empty, it will take the original filename.";;
     esac
@@ -179,6 +227,18 @@ function str_get_comment()
             echo "Snälla, ange mallkommentar.";;
         "nb" | "nn" | "no")
             echo "Vennligst skriv inn malkommentar.";;
+        "tr")
+            echo "Lütfen şablon yorumunu girin.";;
+        "uk")
+            echo "Lütfen şablon yorumunu girin.";;
+        "is")
+            echo "Vinsamlegast sláðu inn athugasemdir við sniðmát.";;
+        "el")
+            echo "Εισαγάγετε σχόλιο προτύπου.";;
+        "hu")
+            echo "Kérjük, írja be a sablon megjegyzést.";;
+        "da")
+            echo "Venligst indtast skabelonkommentar.";;
         *)
             echo "Please, enter template comment.";;
     esac
@@ -215,6 +275,18 @@ function str_created_template()
             echo "Mall skapades framgångsrikt som ";;
         "nb" | "nn" | "no")
             echo "Mal opprettet vellykket som ";;
+        "tr")
+            echo "Şablon başarıyla oluşturuldu ";;
+        "uk")
+            echo "Шаблон успішно створено як ";;
+        "is")
+            echo "Sniðmát búið til sem ";;
+        "el")
+            echo "Το πρότυπο δημιουργήθηκε με επιτυχία ως ";;
+        "hu")
+            echo "A sablon sikeresen létrehozva ";;
+        "da")
+            echo "Skabelon oprettet med succes som ";;
         *)
             echo "Template created successfully as ";;
     esac
@@ -255,6 +327,18 @@ function str_no_available_templates()
             echo "Det finns inga tillgängliga mallar.";;
         "nb" | "nn" | "no")
             echo "Det er ingen tilgjengelige maler.";;
+        "tr")
+            echo "Kullanılabilir şablon yok.";;
+        "uk")
+            echo "Немає доступних шаблонів.";;
+        "is")
+            echo "Engin sniðmát eru til.";;
+        "el")
+            echo "Δεν υπάρχουν διαθέσιμα πρότυπα.";;
+        "hu")
+            echo "Nincsenek elérhető sablonok.";;
+        "da")
+            echo "Der er ingen tilgængelige skabeloner.";;
         *)
             echo "There are no available templates.";;
     esac
@@ -291,6 +375,18 @@ function str_select_templates()
             echo "Välj de mallar du vill ta bort:";;
         "nb" | "nn" | "no")
             echo "Velg malene du vil fjerne:";;
+        "tr")
+            echo "Kaldırmak istediğiniz şablonları seçin:";;
+        "uk")
+            echo "Виберіть шаблон (шаблони), який ви хочете видалити:";;
+        "is")
+            echo "Veldu sniðmátin sem þú vilt fjarlægja:";;
+        "el")
+            echo "Επιλέξτε τα πρότυπα που θέλετε να καταργήσετε:";;
+        "hu")
+            echo "Válassza ki az eltávolítani kívánt sablon (oka) t:";;
+        "da")
+            echo "Vælg den eller de skabeloner, du vil fjerne:";;
         *)
             echo "Select the template(s) you desire to remove:";;
     esac
@@ -327,6 +423,18 @@ function str_remove_confirmation()
             echo "Är du säker på att du vill ta bort nästa mallar? Den här åtgärden kan inte ångras.<br>";;
         "nb" | "nn" | "no")
             echo "Er du sikker på at du vil fjerne neste maler? Denne handlingen kan ikke angres.<br>";;
+        "tr")
+            echo "Sonraki şablonları kaldırmak istediğinizden emin misiniz? Bu işlem geri alınamaz.<br>";;
+        "uk")
+            echo "Ви впевнені, що хочете видалити наступні шаблони? Цю дію не можна скасувати.<br>";;
+        "is")
+            echo "Ertu viss um að þú viljir fjarlægja næstu sniðmát? Ekki er hægt að afturkalla þessa aðgerð.<br>";;
+        "el")
+            echo "Είστε βέβαιοι ότι θέλετε να καταργήσετε τα επόμενα πρότυπα? Δεν είναι δυνατή η αναίρεση αυτής της ενέργειας.<br>";;
+        "hu")
+            echo "Biztosan eltávolítja a következő sablonokat? Ezt a műveletet nem lehet visszavonni.<br>";;
+        "da")
+            echo "Er du sikker på, at du vil fjerne de næste skabeloner? Denne handling kan ikke fortrydes.<br>";;
         *)
             echo "Are you sure you want to remove next templates? This action cannot be undone.<br>";;
     esac
@@ -363,6 +471,18 @@ function str_removed_templates()
             echo "Nästa mallar togs bort:<br>";;
         "nb" | "nn" | "no")
             echo "Neste maler ble fjernet:<br>";;
+        "tr")
+            echo "Sonraki şablonlar kaldırıldı:<br>";;
+        "uk")
+            echo "Наступні шаблони були видалені:<br>";;
+        "is")
+            echo "Næstu sniðmát voru fjarlægð:<br>";;
+        "el")
+            echo "Τα επόμενα πρότυπα καταργήθηκαν:<br>";;
+        "hu")
+            echo "A következő sablonokat eltávolítottuk:<br>";;
+        "da")
+            echo "Næste skabeloner blev fjernet:<br>";;
         *)
             echo "Next templates were removed:<br>";;
     esac
