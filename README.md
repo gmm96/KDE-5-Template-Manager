@@ -28,11 +28,11 @@ me by telegram: [@supremoh](https://t.me/supremoh).
 
 Download the package, extract it and run the following command to **install** this Dolphin Service. 
 
-    sh ./install.sh
+    ./install.sh
 
 If you don't like it, you can **uninstall** it by running:
 
-    sh ./uninstall.sh
+    ./uninstall.sh
 
 ## Usage
 

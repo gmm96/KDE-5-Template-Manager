@@ -29,7 +29,7 @@ Name[pt]=Criar modelo...
 Name[ru]=Создать шаблон...
 Name[nl]=Sjabloon maken…
 Icon=xapp-favorite-symbolic
-Exec=sh $HOME/.bin/TemplateCreator.sh %f
+Exec=$HOME/.bin/TemplateCreator.sh %f
 
 [Desktop Action TemplateEraser]
 Name=Remove existing template(s)
@@ -41,4 +41,4 @@ Name[pt]=Remover modelo(s) existente(s)
 Name[ru]=Удалить существующие шаблон(ы)
 Name[nl]=Gemaakte sjablonen verwijderen
 Icon=delete
-Exec=sh $HOME/.bin/TemplateEraser.sh
+Exec=$HOME/.bin/TemplateEraser.sh
