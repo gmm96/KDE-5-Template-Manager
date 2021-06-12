@@ -1,15 +1,17 @@
 #!/bin/bash
 
-mkdir -p ~/.bin
-mkdir -p ~/Templates/source
-cp ./TemplateCreator.sh ~/.bin/
-cp ./TemplateEraser.sh ~/.bin/
-cp ./TemplateManagerLocalization.sh ~/.bin/
-cp ./TemplateManagerTools.sh ~/.bin/
-chmod +x ~/.bin/TemplateCreator.sh
-chmod +x ~/.bin/TemplateEraser.sh
+bin_dir="$HOME/.bin/"
 
-cp ./TemplateManager.desktop ~/.local/share/kservices5/ServiceMenus/
+mkdir -p "$bin_dir"
+mkdir -p "$HOME/Templates/source"
+cp ./TemplateCreator.sh "$bin_dir"
+cp ./TemplateEraser.sh "$bin_dir"
+cp ./TemplateManagerLocalization.sh "$bin_dir"
+cp ./TemplateManagerTools.sh "$bin_dir"
+chmod +x "$bin_dir/TemplateCreator.sh"
+chmod +x "$bin_dir/TemplateEraser.sh"
+
+cp ./TemplateManager.desktop "$HOME/.local/share/kservices5/ServiceMenus/"
 
 lang_arr=("${LANGUAGE//:/}")
 case "${lang_arr[0]:0:2}" in

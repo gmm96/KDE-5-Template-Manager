@@ -1,11 +1,14 @@
 #!/bin/bash
 
-rm ~/.bin/TemplateCreator.sh
-rm ~/.bin/TemplateEraser.sh
-rm ~/.bin/TemplateManagerLocalization.sh
-rm ~/.bin/TemplateManagerTools.sh
+bin_dir="$HOME/.bin/"
 
-rm ~/.local/share/kservices5/ServiceMenus/TemplateManager.desktop
+rm "$bin_dir/TemplateCreator.sh"
+rm "$bin_dir/TemplateEraser.sh"
+rm "$bin_dir/TemplateManagerLocalization.sh"
+rm "$bin_dir/TemplateManagerTools.sh"
+rmdir "$bin_dir"
+
+rm "$HOME/.local/share/kservices5/ServiceMenus/TemplateManager.desktop"
 
 lang_arr=("${LANGUAGE//:/}")
 case "${lang_arr[0]:0:2}" in
@@ -54,7 +57,7 @@ case "${lang_arr[0]:0:2}" in
 esac
 
 if kdialog --warningyesno "$confirmation_msg" --title "Template manager"; then
-    rm -r ~/Templates/*
+    rm -r "$HOME/Templates/"*
 fi
 
 case "${lang_arr[0]:0:2}" in
