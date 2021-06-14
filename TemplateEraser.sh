@@ -7,13 +7,13 @@
 
 function cancel_operation()
 {
-    kdialog --error "$(str_cancel_operation)" --title "$(str_window_title)"
+    kdialog --error "$(str_cancel_operation)" --title "$(str_window_title)" --icon "$eraser_icon"
     exit 1
 }
 
 function no_available_templates()
 {
-    kdialog --error "$(str_no_available_templates)" --title "$(str_window_title)"
+    kdialog --error "$(str_no_available_templates)" --title "$(str_window_title)" --icon "$eraser_icon"
     exit 1
 }
 
@@ -37,17 +37,17 @@ for file in "$template_src_folder"/* ; do
         filename="$(get_filename "$file")"
         kdialog_args+=("$filename")
         if [ -d "$file" ]; then
-            kdialog_args+=("Dir:   \"$filename\"")
+            kdialog_args+=("🗂   $filename")
         elif [ -f "$file" ]; then
-            kdialog_args+=("File:  \"$filename\"")
+            kdialog_args+=("🗐   $filename")
         else
-            kdialog_args+=("???:   \"$filename\"")
+            kdialog_args+=("❓   $filename")
         fi
         kdialog_args+=("off")
     fi
 done
 
-if ! templates_to_remove=$(kdialog --separate-output --checklist "${kdialog_args[@]}" --title "$(str_window_title)"); then
+if ! templates_to_remove=$(kdialog --separate-output --checklist "${kdialog_args[@]}" --title "$(str_window_title)" --icon "$eraser_icon"); then
     cancel_operation
 fi
 
@@ -56,7 +56,7 @@ while IFS= read -r file; do
     file_list="$file_list<br>- $file"
 done <<< "$templates_to_remove"
 
-if ! kdialog --warningyesno "$(str_remove_confirmation)$file_list" --title "$(str_window_title)"; then
+if ! kdialog --warningyesno "$(str_remove_confirmation)$file_list" --title "$(str_window_title)" --icon "$eraser_icon"; then
     cancel_operation
 fi
 
@@ -64,6 +64,6 @@ while IFS= read -r file; do
     remove_template "$file"
 done <<< "$templates_to_remove"
 
-kdialog --msgbox "$(str_removed_templates)$file_list" --title "$(str_window_title)":
+kdialog --msgbox "$(str_removed_templates)$file_list" --title "$(str_window_title)" --icon "$eraser_icon"
 
 # endregion

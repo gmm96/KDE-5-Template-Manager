@@ -56,7 +56,7 @@ case "${lang_arr[0]:0:2}" in
         confirmation_msg="Do you also want to remove the existing templates? This action cannot be undone.";;
 esac
 
-if kdialog --warningyesno "$confirmation_msg" --title "Template manager"; then
+if kdialog --warningyesno "$confirmation_msg" --title "Template manager" --icon "favorite"; then
     rm -r "$HOME/Templates/"*
 fi
 
@@ -105,4 +105,4 @@ case "${lang_arr[0]:0:2}" in
         success="KDE 5 Template Manager Plugin successfully uninstalled.";;
 esac
 
-kdialog --msgbox "$success" --title "Template manager"
+kdialog --msgbox "$success" --title "Template manager" --icon "favorite"

@@ -1,5 +1,8 @@
 #!/bin/bash
 
+creator_icon="xapp-favorite-symbolic"
+eraser_icon="delete"
+
 template_folder="$HOME/Templates"
 template_src_folder="$HOME/Templates/source"
 

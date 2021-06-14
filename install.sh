@@ -59,4 +59,4 @@ case "${lang_arr[0]:0:2}" in
         success="KDE 5 Template Manager Plugin successfully installed.";;
 esac
 
-kdialog --msgbox "$success" --title "Template manager"
+kdialog --msgbox "$success" --title "Template manager" --icon "favorite"

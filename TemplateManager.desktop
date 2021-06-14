@@ -81,6 +81,7 @@ Name[hu]=Sablon létrehozása...
 Name[da]=Opret skabelon...
 Icon=xapp-favorite-symbolic
 Exec=$HOME/.bin/TemplateCreator.sh %f
+Encoding=UTF-8
 
 [Desktop Action TemplateEraser]
 Name=Remove existing template(s)
@@ -108,3 +109,4 @@ Name[hu]=Meglévő sablon (ok) eltávolítása
 Name[da]=Fjern eksisterende skabeloner
 Icon=delete
 Exec=$HOME/.bin/TemplateEraser.sh
+Encoding=UTF-8
