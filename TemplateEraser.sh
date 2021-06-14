@@ -47,7 +47,7 @@ for file in "$template_src_folder"/* ; do
     fi
 done
 
-if ! templates_to_remove=$(kdialog --separate-output --checklist "${kdialog_args[@]}" --title "$(str_window_title)" --icon "$eraser_icon"); then
+if ! templates_to_remove=$(kdialog --separate-output --checklist "${kdialog_args[@]}" --title "$(str_window_title)" --icon "$eraser_icon" --geometry 500x500); then
     cancel_operation
 fi
 

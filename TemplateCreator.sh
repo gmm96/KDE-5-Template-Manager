@@ -27,7 +27,7 @@ fi
 
 shortname="$(get_filename_wo_extension "$1")"
 
-if ! template_name=$(kdialog --inputbox "$(str_get_name)" "$shortname" --title "$(str_window_title)" --icon "$creator_icon"); then
+if ! template_name=$(kdialog --inputbox "$(str_get_name)" "$shortname" --title "$(str_window_title)" --icon "$creator_icon" --geometry 450x300); then
     cancel_operation
 elif [[ -z "${template_name// /}" ]]; then
     template_name=$shortname

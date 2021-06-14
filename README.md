@@ -49,7 +49,7 @@ templates, where you can select as many as you want to remove. Finally, confirm,
 **It is not recommended removing previous templates** you kept in your disk before you first installed this plugin 
 using the template eraser tool, as some bugs may appear and deletion may not work.
 
-![Dolphin Service Menu](screenshots/1.png "Dolphin Service Menu")
+![Dolphin Service Menu for creating templates](screenshots/1.png "Dolphin Service Menu for creating templates")
 
 ![Template name](screenshots/2.png "Template name")
 
@@ -61,4 +61,10 @@ using the template eraser tool, as some bugs may appear and deletion may not wor
 
 ![Template example](screenshots/6.png "Template example")
 
-![Template deletion](screenshots/7.png "Template deletion")
+![Dolphin Service Menu for removing templates](screenshots/7.png "Dolphin Service Menu for removing templates")
+
+![Template selection](screenshots/8.png "Template selection")
+
+![Delete confirmation](screenshots/9.png "Delete confirmation")
+
+![Removed successfully](screenshots/10.png "Removed successfully")
