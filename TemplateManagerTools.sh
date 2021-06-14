@@ -1,7 +1,7 @@
 #!/bin/bash
 
-creator_icon="xapp-favorite-symbolic"
-eraser_icon="delete"
+creator_icon="emblem-xapp-favorite"
+eraser_icon="trash"
 
 template_folder="$HOME/Templates"
 template_src_folder="$HOME/Templates/source"
