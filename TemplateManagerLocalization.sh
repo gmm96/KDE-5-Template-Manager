@@ -200,47 +200,47 @@ function str_get_comment()
 {
     case "$first_locale" in
         "es")
-            echo "Por favor, introduzca un comentario para la plantilla.";;
+            echo "Por favor, introduzca un comentario para la plantilla.<br>Se mostrará como sugerencia en el de diálogo de creación de un nuevo archivo, donde usted elige su nombre.";;
         "fr")
-            echo "Veuillez saisir un commentaire sur le modèle.";;
+            echo "S'il vous plaît, entrez un commentaire sur le modèle.<br>Il sera affiché comme indice dans la boîte de dialogue de création de nouveau fichier, où vous choisissez son nom de fichier.";;
         "it")
-            echo "Per favore, inserisci il commento del modello.";;
+            echo "Per favore, inserisci il commento del modello.<br>Verrà visualizzato come suggerimento nella finestra di dialogo di creazione del nuovo file, dove scegli il nome del file.";;
         "de")
-            echo "Bitte geben Sie einen Vorlagenkommentar ein.";;
+            echo "Bitte geben Sie einen Kommentar zur Vorlage ein.<br>Er wird als Hinweis im Dialogfeld zum Erstellen neuer Dateien angezeigt, in dem Sie den Dateinamen auswählen.";;
         "pt")
-            echo "Por favor, insira o comentário do modelo.";;
+            echo "Por favor, insira o comentário do modelo.<br>Ele será exibido como uma dica na caixa de diálogo de criação de novo arquivo, onde você escolhe o nome do arquivo.";;
         "ru")
-            echo "Пожалуйста, введите комментарий к шаблону.";;
+            echo "Пожалуйста, введите комментарий к шаблону.<br>Он будет отображаться как подсказка в диалоге создания нового файла, где вы выбираете его имя.";;
         "nl")
-            echo "Voer een sjabloonopmerking in.";;
+            echo "Voer een sjabloonopmerking in.<br>Het wordt weergegeven als hint in het dialoogvenster voor het maken van nieuwe bestanden, waar u de bestandsnaam kiest.";;
         "cs")
-            echo "Zadejte prosím komentář šablony.";;
+            echo "Zadejte prosím komentář šablony.<br>Zobrazí se jako nápověda v novém dialogu pro vytvoření souboru, kde zvolíte jeho název souboru.";;
         "pl")
-            echo "Proszę wpisać komentarz do szablonu.";;
+            echo "Proszę wpisać komentarz do szablonu.<br>Będzie on wyświetlany jako podpowiedź w oknie tworzenia nowego pliku, gdzie wybierasz jego nazwę.";;
         "ro")
-            echo "Vă rugăm, introduceți comentariul șablonului.";;
+            echo "Vă rugăm, introduceți comentariul șablon.<br>Acesta va fi afișat ca indiciu în dialogul de creare a fișierelor noi, unde alegeți numele acestuia.";;
         "et")
-            echo "Sisestage palun malli kommentaar.";;
+            echo "Sisestage palun malli kommentaar.<br>Seda kuvatakse vihjena uues faili loomise dialoogis, kus valite selle failinime.";;
         "fi")
-            echo "Anna mallikommentti.";;
+            echo "Anna mallikommentti.<br>Se näkyy vihjeenä uudessa tiedostonluonti-valintaikkunassa, jossa valitset sen tiedostonimen.";;
         "sv")
-            echo "Snälla, ange mallkommentar.";;
+            echo "Vänligen ange mallkommentar.<br>Den kommer att visas som en ledtråd i dialogrutan för skapande av nya filer, där du väljer filnamn.";;
         "nb" | "nn" | "no")
-            echo "Vennligst skriv inn malkommentar.";;
+            echo "Vennligst skriv inn malkommentarer.<br>Den vises som et hint i dialogboksen for ny filoppretting, der du velger filnavnet.";;
         "tr")
-            echo "Lütfen şablon yorumunu girin.";;
+            echo "Lütfen şablon yorumunu girin.<br>Dosya adını seçtiğiniz yeni dosya oluşturma iletişim kutusunda ipucu olarak görüntülenecektir.";;
         "uk")
-            echo "Lütfen şablon yorumunu girin.";;
+            echo "Будь ласка, введіть коментар до шаблону.<br>Він буде відображений як підказка у діалоговому вікні створення нового файлу, де ви виберете його ім'я файлу.";;
         "is")
-            echo "Vinsamlegast sláðu inn athugasemdir við sniðmát.";;
+            echo "Vinsamlegast sláðu inn sniðmátaskýringu.<br>Það verður sýnt sem vísbending í nýjum skjalagerðarglugga þar sem þú velur skráarnafn.";;
         "el")
-            echo "Εισαγάγετε σχόλιο προτύπου.";;
+            echo "Εισαγάγετε σχόλιο προτύπου.<br>Θα εμφανίζεται ως υπόδειξη στο νέο διάλογο δημιουργίας αρχείων, όπου επιλέγετε το όνομα αρχείου του.";;
         "hu")
-            echo "Kérjük, írja be a sablon megjegyzést.";;
+            echo "Kérjük, írja be a sablon megjegyzését.<br>Ujjként jelenik meg az új fájl létrehozása párbeszédpanelen, ahol a fájlnevet választja.";;
         "da")
-            echo "Venligst indtast skabelonkommentar.";;
+            echo "Indtast venligst skabelonkommentar.<br>Den vises som antydning i dialogboksen til oprettelse af en ny fil, hvor du vælger dens filnavn.";;
         *)
-            echo "Please, enter template comment.";;
+            echo "Please, enter template comment.<br>It will be displayed as hint in new file creation dialog, where you choose its filename.";;
     esac
 }
 
