@@ -3,6 +3,7 @@
 bin_dir="$HOME/.bin/"
 
 rm "$bin_dir/TemplateCreator.sh"
+rm "$bin_dir/TemplateEditor.sh"
 rm "$bin_dir/TemplateEraser.sh"
 rm "$bin_dir/TemplateManagerLocalization.sh"
 rm "$bin_dir/TemplateManagerTools.sh"

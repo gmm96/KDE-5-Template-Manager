@@ -294,6 +294,826 @@ function str_created_template()
 
 # endregion
 
+# region TemplateEditor
+
+function str_name_should_not_be_empty()
+{
+    case "$first_locale" in
+        "es")
+            echo "El nombre de la plantilla no puede estar vacío.";;
+        "fr")
+            echo "Le nom du modèle ne doit pas être vide.";;
+        "it")
+            echo "Il nome del modello non deve essere vuoto.";;
+        "de")
+            echo "Der Vorlagenname darf nicht leer sein.";;
+        "pt")
+            echo "O nome do modelo não deve estar vazio.";;
+        "ru")
+            echo "Название шаблона не должно быть пустым.";;
+        "nl")
+            echo "Sjabloonnaam mag niet leeg zijn.";;
+        "cs")
+            echo "Název šablony by neměl být prázdný.";;
+        "pl")
+            echo "Nazwa szablonu nie powinna być pusta.";;
+        "ro")
+            echo "Numele șablonului nu trebuie să fie gol.";;
+        "et")
+            echo "Mallinimi ei tohi olla tühi.";;
+        "fi")
+            echo "Mallin nimi ei saa olla tyhjä.";;
+        "sv")
+            echo "Mallnamnet får inte vara tomt.";;
+        "nb" | "nn" | "no")
+            echo "Malnavnet skal ikke være tomt.";;
+        "tr")
+            echo "Şablon adı boş bırakılmamalıdır.";;
+        "uk")
+            echo "Ім'я шаблону не повинно бути порожнім.";;
+        "is")
+            echo "Sniðmát heiti ætti ekki að vera autt.";;
+        "el")
+            echo "Το όνομα προτύπου δεν πρέπει να είναι κενό.";;
+        "hu")
+            echo "A sablon neve nem lehet üres.";;
+        "da")
+            echo "Skabelonnavn bør ikke være tomt.";;
+        *)
+            echo "Template name should not be empty.";;
+    esac
+}
+
+function str_select_template_to_edit()
+{
+    case "$first_locale" in
+        "es")
+            echo "Seleccione la plantilla que desee editar:";;
+        "fr")
+            echo "Sélectionnez le modèle que vous souhaitez modifier:";;
+        "it")
+            echo "Seleziona il modello che vuoi modificare:";;
+        "de")
+            echo "Wählen Sie die Vorlage aus, die Sie bearbeiten möchten:";;
+        "pt")
+            echo "Selecione o modelo que deseja editar:";;
+        "ru")
+            echo "Выберите шаблон, который хотите отредактировать:";;
+        "nl")
+            echo "Selecteer de sjabloon die u wilt bewerken:";;
+        "cs")
+            echo "Vyberte šablonu, kterou chcete upravit:";;
+        "pl")
+            echo "Wybierz szablon, który chcesz edytować:";;
+        "ro")
+            echo "Selectați șablonul pe care doriți să îl editați:";;
+        "et")
+            echo "Valige mall, mida soovite muuta:";;
+        "fi")
+            echo "Valitse muokattava malli:";;
+        "sv")
+            echo "Välj mallen du vill redigera:";;
+        "nb" | "nn" | "no")
+            echo "Velg malen du vil redigere:";;
+        "tr")
+            echo "Düzenlemek istediğiniz şablonu seçin:";;
+        "uk")
+            echo "Виберіть шаблон, який потрібно редагувати:";;
+        "is")
+            echo "Veldu sniðmát sem þú vilt breyta:";;
+        "el")
+            echo "Επιλέξτε το πρότυπο που θέλετε να επεξεργαστείτε:";;
+        "hu")
+            echo "Válassza ki a szerkeszteni kívánt sablont:";;
+        "da")
+            echo "Vælg den skabelon, du vil redigere:";;
+        *)
+            echo "Select the template you want to edit:";;
+    esac
+}
+
+function str_select_property_to_edit()
+{
+    case "$first_locale" in
+        "es")
+            echo "Elija la acción que desea realizar.<br>Puede guardar los cambios para conservarlos o descartarlos haciendo click en <i>Cancelar</i>.";;
+        "fr")
+            echo "Choisissez l'action que vous souhaitez effectuer.<br>Vous pouvez enregistrer les modifications pour les conserver ou les annuler en cliquant sur <i>Annuler</i>.";;
+        "it")
+            echo "Scegli l'azione che desideri eseguire.<br>Puoi salvare le modifiche per conservarle o eliminarle facendo clic su <i>Annulla</i>.";;
+        "de")
+            echo "Wählen Sie die Aktion aus, die Sie ausführen möchten.<br>Sie können die Änderungen speichern, um sie beizubehalten, oder sie verwerfen, indem Sie auf <i>Abbrechen</i> klicken.";;
+        "pt")
+            echo "Escolha a ação que deseja executar.<br>Você pode salvar as alterações para mantê-las ou descartá-las clicando em <i>Cancelar</i>.";;
+        "ru")
+            echo "Выберите действие, которое вы хотите выполнить.<br>Вы можете сохранить изменения или отменить их, нажав <i>Отмена</i>.";;
+        "nl")
+            echo "Kies de actie die u wilt uitvoeren.<br>U kunt de wijzigingen opslaan om ze te behouden of ze verwijderen door op <i>Annuleren</i> te klikken.";;
+        "cs")
+            echo "Vyberte akci, kterou chcete provést.<br>Změny můžete uložit, abyste je uchovali, nebo je zahodit kliknutím na <i>Zrušit</i>.";;
+        "pl")
+            echo "Wybierz czynność, którą chcesz wykonać.<br>Możesz zapisać zmiany, aby je zachować, lub odrzucić je, klikając <i>Anuluj</i>.";;
+        "ro")
+            echo "Alegeți acțiunea pe care doriți să o efectuați.<br>Puteți salva modificările pentru a le păstra sau le puteți renunța făcând clic pe <i>Anulare</i>.";;
+        "et")
+            echo "Valige toiming, mida soovite teha.<br>Muudatuste säilitamiseks võite muudatused salvestada või neist loobuda, klõpsates nuppu <i>Tühista</i>.";;
+        "fi")
+            echo "Valitse suoritettava toiminto.<br>Voit tallentaa muutokset säilyttääksesi ne tai hylätä ne napsauttamalla <i>Peruuta</i>.";;
+        "sv")
+            echo "Välj den åtgärd du vill utföra.<br>Du kan spara ändringarna för att behålla dem eller kasta dem genom att klicka på <i>Avbryt</i>.";;
+        "nb" | "nn" | "no")
+            echo "Velg handlingen du vil utføre.<br>Du kan lagre endringene for å beholde dem eller forkaste dem ved å klikke på <i>Avbryt</i>.";;
+        "tr")
+            echo "Gerçekleştirmek istediğiniz eylemi seçin.<br>Değişiklikleri saklamak için kaydedebilir veya <i>İptal</i>'i tıklayarak iptal edebilirsiniz.";;
+        "uk")
+            echo "Виберіть дію, яку хочете виконати.<br>Ви можете зберегти зміни, щоб зберегти їх, або відхилити, натиснувши <i>Скасувати</i>.";;
+        "is")
+            echo "Veldu aðgerðina sem þú vilt framkvæma.<br>Þú getur vistað breytingarnar til að halda þeim eða fargað þeim með því að smella á <i>Hætta við</i>.";;
+        "el")
+            echo "Επιλέξτε την ενέργεια που θέλετε να εκτελέσετε.<br>Μπορείτε να αποθηκεύσετε τις αλλαγές για να τις διατηρήσετε ή να τις απορρίψετε κάνοντας κλικ στο <i>Ακύρωση</i>.";;
+        "hu")
+            echo "Válassza ki a végrehajtani kívánt műveletet.<br>A módosításokat elmentheti, hogy megtartsa őket, vagy elvetheti őket a <i>Mégse</i> gombra kattintva.";;
+        "da")
+            echo "Vælg den handling, du vil udføre.<br>Du kan gemme ændringerne for at beholde dem eller kassere dem ved at klikke på <i>Annuller</i>.";;
+        *)
+            echo "Choose the action you want to perform.<br>You can save the changes to keep them or discard them by clicking on <i>Cancel</i>.";;
+    esac
+}
+
+function str_edit_name()
+{
+    case "$first_locale" in
+        "es")
+            echo "Editar nombre";;
+        "fr")
+            echo "Modifier le nom";;
+        "it")
+            echo "Modifica nome";;
+        "de")
+            echo "Namen bearbeiten";;
+        "pt")
+            echo "Editar nome";;
+        "ru")
+            echo "Редактировать название";;
+        "nl")
+            echo "Naam bewerken";;
+        "cs")
+            echo "Upravit jméno";;
+        "pl")
+            echo "Zmień imię";;
+        "ro")
+            echo "Editeaza numele";;
+        "et")
+            echo "Muuda nime";;
+        "fi")
+            echo "Muokkaa nimeä";;
+        "sv")
+            echo "Redigera namn";;
+        "nb" | "nn" | "no")
+            echo "Rediger navn";;
+        "tr")
+            echo "Adı düzenle";;
+        "uk")
+            echo "Редагувати ім'я";;
+        "is")
+            echo "Breyttu nafni";;
+        "el")
+            echo "Επεξεργασία ονόματος";;
+        "hu")
+            echo "Név szerkesztése";;
+        "da")
+            echo "Rediger navn";;
+        *)
+            echo "Edit name";;
+    esac
+}
+
+function str_edit_comment()
+{
+    case "$first_locale" in
+        "es")
+            echo "Editar comentario";;
+        "fr")
+            echo "Modifier le commentaire";;
+        "it")
+            echo "Modifica commento";;
+        "de")
+            echo "Kommentar bearbeiten";;
+        "pt")
+            echo "Editar comentário";;
+        "ru")
+            echo "Редактировать комментарий";;
+        "nl")
+            echo "Reactie bewerken";;
+        "cs")
+            echo "Upravit komentář";;
+        "pl")
+            echo "Edytuj komentarz";;
+        "ro")
+            echo "Editați comentariul";;
+        "et")
+            echo "Muuda kommentaari";;
+        "fi")
+            echo "Muokkaa kommenttia";;
+        "sv")
+            echo "Redigera kommentar";;
+        "nb" | "nn" | "no")
+            echo "Rediger kommentar";;
+        "tr")
+            echo "Yorumu düzenle";;
+        "uk")
+            echo "Редагувати коментар";;
+        "is")
+            echo "Breyta athugasemd";;
+        "el")
+            echo "Επεξεργασία σχολίου";;
+        "hu")
+            echo "Megjegyzés szerkesztése";;
+        "da")
+            echo "Rediger kommentar";;
+        *)
+            echo "Edit comment";;
+    esac
+}
+
+function str_edit_icon()
+{
+    case "$first_locale" in
+        "es")
+            echo "Editar icono";;
+        "fr")
+            echo "Modifier l'icône";;
+        "it")
+            echo "Modifica l'icona";;
+        "de")
+            echo "Bearbeiten Sie das Symbol";;
+        "pt")
+            echo "Edite o ícone";;
+        "ru")
+            echo "Отредактируйте значок";;
+        "nl")
+            echo "Bewerk het pictogram";;
+        "cs")
+            echo "Upravte ikonu";;
+        "pl")
+            echo "Edytuj ikonę";;
+        "ro")
+            echo "Editați pictograma";;
+        "et")
+            echo "Muutke ikooni";;
+        "fi")
+            echo "Muokkaa kuvaketta";;
+        "sv")
+            echo "Redigera ikonen";;
+        "nb" | "nn" | "no")
+            echo "Rediger ikonet";;
+        "tr")
+            echo "Simgeyi düzenle";;
+        "uk")
+            echo "Відредагуйте піктограму";;
+        "is")
+            echo "Breyttu tákninu";;
+        "el")
+            echo "Επεξεργαστείτε το εικονίδιο";;
+        "hu")
+            echo "Szerkessze az ikont";;
+        "da")
+            echo "Rediger ikonet";;
+        *)
+            echo "Edit icon";;
+    esac
+}
+
+function str_save_and_exit()
+{
+    case "$first_locale" in
+        "es")
+            echo "Guardar y salir";;
+        "fr")
+            echo "Sauvegarder et quitter";;
+        "it")
+            echo "Salva ed esci";;
+        "de")
+            echo "Speichern und schließen";;
+        "pt")
+            echo "Salvar e sair";;
+        "ru")
+            echo "Сохранить и выйти";;
+        "nl")
+            echo "Opslaan en afsluiten";;
+        "cs")
+            echo "Uložit a odejít";;
+        "pl")
+            echo "Zapisz i wyjdź";;
+        "ro")
+            echo "Salvează și ieși";;
+        "et")
+            echo "Salvesta ja välju";;
+        "fi")
+            echo "Tallenna ja poistu";;
+        "sv")
+            echo "Spara och avsluta";;
+        "nb" | "nn" | "no")
+            echo "Lagre og lukk";;
+        "tr")
+            echo "Kaydet ve çık";;
+        "uk")
+            echo "Зберегти та вийти";;
+        "is")
+            echo "Vista og hætta";;
+        "el")
+            echo "Αποθήκευση και έξοδος";;
+        "hu")
+            echo "Mentés és kilépés";;
+        "da")
+            echo "Gem og luk";;
+        *)
+            echo "Save and exit";;
+    esac
+}
+
+function str_edited_template()
+{
+    case "$first_locale" in
+        "es")
+            echo "Plantilla modificada con éxito.";;
+        "fr")
+            echo "Modèle modifié avec succès.";;
+        "it")
+            echo "Modello modificato con successo.";;
+        "de")
+            echo "Vorlage erfolgreich geändert.";;
+        "pt")
+            echo "Modelo editado com sucesso.";;
+        "ru")
+            echo "Шаблон успешно отредактирован.";;
+        "nl")
+            echo "Sjabloon succesvol bewerkt.";;
+        "cs")
+            echo "Šablona byla úspěšně upravena.";;
+        "pl")
+            echo "Pomyślnie edytowano szablon.";;
+        "ro")
+            echo "Șablonul a fost editat cu succes.";;
+        "et")
+            echo "Mall on edukalt muudetud.";;
+        "fi")
+            echo "Mallin muokkaus onnistui.";;
+        "sv")
+            echo "Mall redigerades framgångsrikt.";;
+        "nb" | "nn" | "no")
+            echo "Malen ble redigert.";;
+        "tr")
+            echo "Şablon başarıyla düzenlendi.";;
+        "uk")
+            echo "Шаблон успішно відредаговано.";;
+        "is")
+            echo "Sniðmáti breytt.";;
+        "el")
+            echo "Η επεξεργασία του προτύπου ολοκληρώθηκε με επιτυχία.";;
+        "hu")
+            echo "A sablon szerkesztése sikeres volt.";;
+        "da")
+            echo "Skabelonen blev redigeret.";;
+        *)
+            echo "Template edited successfully.";;
+    esac
+}
+
+function str_exists_template_with_same_name()
+{
+    case "$first_locale" in
+        "es")
+            echo "Ya existe una plantilla con el mismo nombre. Por favor, pruebe con otro.";;
+        "fr")
+            echo "Il existe un modèle existant avec exactement le même. S'il vous plaît, essayez-en un autre.";;
+        "it")
+            echo "C'è un modello esistente con esattamente lo stesso. Per favore, provane un altro.";;
+        "de")
+            echo "Es gibt eine vorhandene Vorlage mit genau der gleichen. Bitte versuchen Sie es mit einem anderen.";;
+        "pt")
+            echo "Existe um modelo existente com exatamente o mesmo. Por favor, tente outro.";;
+        "ru")
+            echo "Есть существующий шаблон с точно таким же. Пожалуйста, попробуйте другой.";;
+        "nl")
+            echo "Er is een bestaande sjabloon met precies hetzelfde. Probeer een andere.";;
+        "cs")
+            echo "Existuje existující šablona s přesně stejnou. Zkuste prosím jiný.";;
+        "pl")
+            echo "Istnieje szablon z dokładnie tym samym. Proszę, spróbuj innego.";;
+        "ro")
+            echo "Există un șablon existent cu exact același lucru. Vă rog, încercați altul.";;
+        "et")
+            echo "Olemasolev mall täpselt sama. Palun proovige mõnda muud.";;
+        "fi")
+            echo "Olemassa oleva malli, jossa on täsmälleen sama. Yritä toista.";;
+        "sv")
+            echo "Det finns en befintlig mall med exakt samma. Snälla, prova en annan.";;
+        "nb" | "nn" | "no")
+            echo "Der en eksisterende mal med nøyaktig den samme. Vær så snill, prøv en annen.";;
+        "tr")
+            echo "Tam olarak aynı olan mevcut bir şablon var. Lütfen, başka bir tane deneyin.";;
+        "uk")
+            echo "Існує існуючий шаблон із абсолютно однаковим. Будь ласка, спробуйте інший.";;
+        "is")
+            echo "Þar er núverandi sniðmát með nákvæmlega það sama. Vinsamlegast reyndu annað.";;
+        "el")
+            echo "Υπάρχει ένα υπάρχον πρότυπο με ακριβώς το ίδιο. Παρακαλώ, δοκιμάστε ένα άλλο.";;
+        "hu")
+            echo "Van egy létező sablon pontosan ugyanazzal. Kérjük, próbálkozzon másikkal.";;
+        "da")
+            echo "Der er en eksisterende skabelon med nøjagtig den samme. Prøv en anden.";;
+        *)
+            echo "There an existing template with exactly the same same. Please, try another.";;
+    esac
+}
+
+function str_open_current_template()
+{
+    case "$first_locale" in
+        "es")
+            echo "Abrir plantilla actual";;
+        "fr")
+            echo "Ouvrir le modèle actuel";;
+        "it")
+            echo "Apri il modello corrente";;
+        "de")
+            echo "Aktuelle Vorlage öffnen";;
+        "pt")
+            echo "Abra o modelo atual";;
+        "ru")
+            echo "Открыть текущий шаблон";;
+        "nl")
+            echo "Huidige sjabloon openen";;
+        "cs")
+            echo "Otevřít aktuální šablonu";;
+        "pl")
+            echo "Otwórz aktualny szablon";;
+        "ro")
+            echo "Deschideți șablonul curent";;
+        "et")
+            echo "Ava praegune mall";;
+        "fi")
+            echo "Avaa nykyinen malli";;
+        "sv")
+            echo "Åpne gjeldende mal";;
+        "nb" | "nn" | "no")
+            echo "Åpne gjeldende mal";;
+        "tr")
+            echo "Geçerli şablonu aç";;
+        "uk")
+            echo "Відкрити поточний шаблон";;
+        "is")
+            echo "Opnaðu núverandi sniðmát";;
+        "el")
+            echo "Ανοίξτε το τρέχον πρότυπο";;
+        "hu")
+            echo "Nyissa meg az aktuális sablont";;
+        "da")
+            echo "Åbn den aktuelle skabelon";;
+        *)
+            echo "Open current template";;
+    esac
+}
+
+function str_update_template()
+{
+    case "$first_locale" in
+        "es")
+            echo "Actualizar plantilla con un nuevo archivo o directorio";;
+        "fr")
+            echo "Mettre à jour le modèle avec un nouveau fichier ou répertoire";;
+        "it")
+            echo "Aggiorna il modello con un nuovo file o directory";;
+        "de")
+            echo "Vorlage mit neuer Datei oder Verzeichnis aktualisieren";;
+        "pt")
+            echo "Atualizar modelo com novo arquivo ou diretório";;
+        "ru")
+            echo "Обновить шаблон с новым файлом или каталогом";;
+        "nl")
+            echo "Sjabloon bijwerken met nieuw bestand of nieuwe map";;
+        "cs")
+            echo "Aktualizujte šablonu o nový soubor nebo adresář";;
+        "pl")
+            echo "Zaktualizuj szablon o nowy plik lub katalog";;
+        "ro")
+            echo "Actualizați șablonul cu fișier sau director nou";;
+        "et")
+            echo "Värskendage malli uue faili või kataloogiga";;
+        "fi")
+            echo "Päivitä malli uudella tiedostolla tai hakemistolla";;
+        "sv")
+            echo "Uppdatera mall med ny fil eller katalog";;
+        "nb" | "nn" | "no")
+            echo "Oppdater mal med ny fil eller katalog";;
+        "tr")
+            echo "Şablonu yeni dosya veya dizinle güncelleyin";;
+        "uk")
+            echo "Оновити шаблон новим файлом або каталогом";;
+        "is")
+            echo "Uppfærðu sniðmát með nýrri skrá eða möppu";;
+        "el")
+            echo "Ενημέρωση προτύπου με νέο αρχείο ή κατάλογο";;
+        "hu")
+            echo "Frissítse a sablont új fájllal vagy könyvtárral";;
+        "da")
+            echo "Opdater skabelon med ny fil eller mappe";;
+        *)
+            echo "Update template with new file or directory";;
+    esac
+}
+
+function str_discard_new_template()
+{
+    case "$first_locale" in
+        "es")
+            echo "Descartar el nuevo archivo o directorio de plantilla";;
+        "fr")
+            echo "Supprimer le nouveau fichier modèle ou répertoire";;
+        "it")
+            echo "Elimina nuovo file modello o directory";;
+        "de")
+            echo "Neue Vorlagendatei oder neues Verzeichnis verwerfen";;
+        "pt")
+            echo "Descartar novo arquivo ou diretório de modelo";;
+        "ru")
+            echo "Отменить новый файл или каталог шаблона";;
+        "nl")
+            echo "Nieuw sjabloonbestand of nieuwe map verwijderen";;
+        "cs")
+            echo "Zlikvidujte nový soubor šablony nebo adresář";;
+        "pl")
+            echo "Odrzuć nowy plik szablonu lub katalog";;
+        "ro")
+            echo "Aruncați fișierul sau directorul șablon nou";;
+        "et")
+            echo "Visake uus mallifail või kataloog minema";;
+        "fi")
+            echo "Hylkää uusi mallitiedosto tai hakemisto";;
+        "sv")
+            echo "Kasta ny mallfil eller katalog";;
+        "nb" | "nn" | "no")
+            echo "Kast ny malfil eller katalog";;
+        "tr")
+            echo "Yeni şablon dosyasını veya dizini atın";;
+        "uk")
+            echo "Dobja el az új sablonfájlt vagy könyvtárat";;
+        "is")
+            echo "Fargaðu nýrri sniðmátaskrá eða möppu";;
+        "el")
+            echo "Απορρίψτε νέο αρχείο προτύπου ή κατάλογο";;
+        "hu")
+            echo "Dobja el az új sablonfájlt vagy könyvtárat";;
+        "da")
+            echo "Kasser ny skabelonfil eller mappe";;
+        *)
+            echo "Discard new template file or directory";;
+    esac
+}
+
+function str_open_new_template()
+{
+    case "$first_locale" in
+        "es")
+            echo "Abrir nueva plantilla";;
+        "fr")
+            echo "Ouvrir nouveau modèle";;
+        "it")
+            echo "Apri nuovo modello";;
+        "de")
+            echo "Neue Vorlage öffnen";;
+        "pt")
+            echo "Abrir novo modelo";;
+        "ru")
+            echo "Открыть новый шаблон";;
+        "nl")
+            echo "Nieuwe sjabloon openen";;
+        "cs")
+            echo "Otevřít novou šablonu";;
+        "pl")
+            echo "Otwórz nowy szablon";;
+        "ro")
+            echo "Deschideți un șablon nou";;
+        "et")
+            echo "Ava uus mall";;
+        "fi")
+            echo "Avaa uusi malli";;
+        "sv")
+            echo "Öppna ny mall";;
+        "nb" | "nn" | "no")
+            echo "Åpne ny mal";;
+        "tr")
+            echo "Yeni şablon aç";;
+        "uk")
+            echo "Відкрити новий шаблон";;
+        "is")
+            echo "Opnaðu nýtt sniðmát";;
+        "el")
+            echo "Άνοιγμα νέου προτύπου";;
+        "hu")
+            echo "Új sablon megnyitása";;
+        "da")
+            echo "Åbn ny skabelon";;
+        *)
+            echo "Open new template";;
+    esac
+}
+
+function str_select_new_template_type()
+{
+    case "$first_locale" in
+        "es")
+            echo "Seleccione el tipo de la nueva fuente de plantilla.";;
+        "fr")
+            echo "Sélectionnez le type de la nouvelle source de modèle.";;
+        "it")
+            echo "Seleziona il tipo della nuova origine del modello.";;
+        "de")
+            echo "Wählen Sie den Typ der neuen Vorlagenquelle aus.";;
+        "pt")
+            echo "Selecione o tipo da nova fonte de modelo.";;
+        "ru")
+            echo "Выберите тип нового источника шаблона.";;
+        "nl")
+            echo "Selecteer het type van de nieuwe sjabloonbron.";;
+        "cs")
+            echo "Vyberte typ nového zdroje šablony.";;
+        "pl")
+            echo "Wybierz typ nowego źródła szablonu.";;
+        "ro")
+            echo "Selectați tipul sursei noului șablon.";;
+        "et")
+            echo "Valige uue malli allika tüüp.";;
+        "fi")
+            echo "Valitse uuden mallilähteen tyyppi.";;
+        "sv")
+            echo "Välj typen av den nya mallkällan.";;
+        "nb" | "nn" | "no")
+            echo "Velg typen for den nye malkilden.";;
+        "tr")
+            echo "Yeni şablon kaynağının türünü seçin.";;
+        "uk")
+            echo "Виберіть тип нового джерела шаблону.";;
+        "is")
+            echo "Veldu gerð nýju sniðmátagjafans.";;
+        "el")
+            echo "Επιλέξτε τον τύπο της νέας πηγής προτύπου.";;
+        "hu")
+            echo "Válassza ki az új sablonforrás típusát.";;
+        "da")
+            echo "Vælg typen af den nye skabelonkilde.";;
+        *)
+            echo "Select the type of the new template source.";;
+    esac
+}
+
+function str_file()
+{
+    case "$first_locale" in
+        "es")
+            echo "Archivo";;
+        "fr")
+            echo "Fichier";;
+        "it")
+            echo "File";;
+        "de")
+            echo "Datei";;
+        "pt")
+            echo "Arquivo";;
+        "ru")
+            echo "Файл";;
+        "nl")
+            echo "Het dossier";;
+        "cs")
+            echo "Soubor";;
+        "pl")
+            echo "Plik";;
+        "ro")
+            echo "Fişier";;
+        "et")
+            echo "Fail";;
+        "fi")
+            echo "Tiedosto";;
+        "sv")
+            echo "Fil";;
+        "nb" | "nn" | "no")
+            echo "Fil";;
+        "tr")
+            echo "Dosya";;
+        "uk")
+            echo "Файл";;
+        "is")
+            echo "Skrá";;
+        "el")
+            echo "Αρχείο";;
+        "hu")
+            echo "File";;
+        "da")
+            echo "Fil";;
+        *)
+            echo "File";;
+    esac
+}
+
+function str_directory()
+{
+    case "$first_locale" in
+        "es")
+            echo "Directorio";;
+        "fr")
+            echo "Directoire";;
+        "it")
+            echo "Directory";;
+        "de")
+            echo "Verzeichnis";;
+        "pt")
+            echo "Diretório";;
+        "ru")
+            echo "Каталог";;
+        "nl")
+            echo "Directory";;
+        "cs")
+            echo "Adresář";;
+        "pl")
+            echo "Informator";;
+        "ro")
+            echo "Director";;
+        "et")
+            echo "Kataloog";;
+        "fi")
+            echo "Hakemisto";;
+        "sv")
+            echo "Katalog";;
+        "nb" | "nn" | "no")
+            echo "Katalog";;
+        "tr")
+            echo "Dizin";;
+        "uk")
+            echo "Каталог";;
+        "is")
+            echo "Mappa";;
+        "el")
+            echo "Ευρετήριο";;
+        "hu")
+            echo "Könyvtár";;
+        "da")
+            echo "Vejviser";;
+        *)
+            echo "Directory";;
+    esac
+}
+
+function str_backup_confirmation()
+{
+    case "$first_locale" in
+        "es")
+            echo "¿Desearía hacer una copia de seguridad de la plantilla anterior?";;
+        "fr")
+            echo "Souhaitez-vous faire une sauvegarde du dernier modèle?";;
+        "it")
+            echo "Vuoi fare un backup dell'ultimo modello?";;
+        "de")
+            echo "Möchten Sie ein Backup der letzten Vorlage erstellen?";;
+        "pt")
+            echo "Você gostaria de fazer um backup do último modelo?";;
+        "ru")
+            echo "Хотите сделать резервную копию последнего шаблона?";;
+        "nl")
+            echo "Wilt u een back-up maken van het laatste sjabloon?";;
+        "cs")
+            echo "Chcete vytvořit zálohu poslední šablony?";;
+        "pl")
+            echo "Czy chcesz zrobić kopię zapasową ostatniego szablonu?";;
+        "ro")
+            echo "Doriți să faceți o copie de rezervă a ultimului șablon?";;
+        "et")
+            echo "Kas soovite teha viimase malli varukoopia?";;
+        "fi")
+            echo "Haluatko tehdä varmuuskopion viimeisestä mallista?";;
+        "sv")
+            echo "Vill du göra en säkerhetskopia av den sista mallen?";;
+        "nb" | "nn" | "no")
+            echo "Vil du ta en sikkerhetskopi av den siste malen?";;
+        "tr")
+            echo "Son şablonun bir yedeğini almak ister misiniz?";;
+        "uk")
+            echo "Хочете зробити резервну копію останнього шаблону?";;
+        "is")
+            echo "Viltu taka afrit af síðasta sniðmátinu?";;
+        "el")
+            echo "Θέλετε να δημιουργήσετε αντίγραφο ασφαλείας του τελευταίου προτύπου?";;
+        "hu")
+            echo "Szeretne biztonsági másolatot készíteni az utolsó sablonról?";;
+        "da")
+            echo "Vil du tage en sikkerhedskopi af den sidste skabelon?";;
+        *)
+            echo "Would you like to make a backup of the last template?";;
+    esac
+}
+
+# endregion
+
 # region TemplateEraser
 
 function str_no_available_templates()
@@ -344,7 +1164,7 @@ function str_no_available_templates()
     esac
 }
 
-function str_select_templates()
+function str_select_templates_to_remove()
 {
     case "$first_locale" in
         "es")
@@ -388,7 +1208,7 @@ function str_select_templates()
         "da")
             echo "Vælg den eller de skabeloner, du vil fjerne:";;
         *)
-            echo "Select the template(s) you desire to remove:";;
+            echo "Select the template(s) you want to remove:";;
     esac
 }
 

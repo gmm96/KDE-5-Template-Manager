@@ -22,15 +22,15 @@ function remove_template()
     rm -r "${template_src_folder:?}/${1:?}" "$(get_template_desktop_path "$1")"
 }
 
+
 # region Main
 
-
-if [ "$(ls -1q "$template_src_folder" | wc -l)" -eq 0 ]; then
+if [ "$(find "$template_src_folder" -maxdepth 1 -mindepth 1 -printf '%P\n' | wc -l)" -eq 0 ]; then
     no_available_templates
 fi
 
 declare -a kdialog_args
-kdialog_args+=("$(str_select_templates)")
+kdialog_args+=("$(str_select_templates_to_remove)")
 
 for file in "$template_src_folder"/* ; do
     if [ -e "$file" ] && [ -e "$(get_template_desktop_path "$file")" ]; then
