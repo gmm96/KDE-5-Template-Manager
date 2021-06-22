@@ -3,13 +3,13 @@
 ### KDE 5 Dolphin Service Menu for managing templates.
 
 <p align="center">
-    <a href="https://kde.org/"><img src="https://avatars.githubusercontent.com/u/14312869?s=200&v=4" alt="KDE logo" width="70" style="border-radius:10%"/></a>
+    <a href="https://kde.org/" target="_blank"><img src="https://avatars.githubusercontent.com/u/14312869?s=200&v=4" alt="KDE logo" width="70" style="border-radius:10%"/></a>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="https://kde.org/es/plasma-desktop/"><img src="https://upload.wikimedia.org/wikipedia/commons/9/95/KDE_Plasma_5_banner.png" alt="Plasma 5" height="75" style="border-radius:10%"/></a>
+    <a href="https://kde.org/es/plasma-desktop/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/9/95/KDE_Plasma_5_banner.png" alt="Plasma 5" height="75" style="border-radius:10%"/></a>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="https://apps.kde.org/es/dolphin/"><img src="https://apps.kde.org/app-icons/org.kde.dolphin.svg" alt="Plasma 5" height="80" style="border-radius:10%"/></a>
+    <a href="https://apps.kde.org/es/dolphin/" target="_blank"><img src="https://apps.kde.org/app-icons/org.kde.dolphin.svg" alt="Plasma 5" height="80" style="border-radius:10%"/></a>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="https://github.com/gmm96/KDE-5-Template-Manager"><img src="TemplateManagerIcon.png" alt="Templates" height="75" style="border-radius:10%"/></a>
+    <a href="https://github.com/gmm96/KDE-5-Template-Manager" target="_blank"><img src="TemplateManagerIcon.png" alt="Templates" height="75" style="border-radius:10%"/></a>
 </p>
 
 **Templates** are such a good feature for productivity. They are used to define a unique non-executable
