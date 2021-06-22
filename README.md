@@ -112,7 +112,7 @@ using the template eraser tool, as some bugs may appear and deletion may not wor
 
 ![Template Editor - Dolphin 'Create New' menu](screenshots/edit12.png "Template Editor - Dolphin 'Create New' menu")
 
-# Template deletion
+### Template deletion
 ![Template Eraser - Dolphin Service Menu](screenshots/remove1.png "Template Eraser - Dolphin Service Menu")
 
 ![Template Eraser - Template selection](screenshots/remove2.png "Template Eraser - Template selection")
