@@ -2,7 +2,7 @@
 
 ### KDE 5 Dolphin Service Menu for managing templates.
 
-<center>
+<p align="center">
     <img src="https://avatars.githubusercontent.com/u/14312869?s=200&v=4" alt="KDE logo" width="70" style="border-radius:10%"/>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/KDE_Plasma_5_banner.png" alt="Plasma 5" height="75" style="border-radius:10%"/>
@@ -10,7 +10,7 @@
     <img src="https://apps.kde.org/app-icons/org.kde.dolphin.svg" alt="Plasma 5" height="80" style="border-radius:10%"/>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <img src="TemplateManagerIcon.png" alt="Templates" height="75" style="border-radius:10%"/>
-</center>
+</p>
 
 **Templates** are such a good feature for productivity. They are used to define a unique non-executable
 file format intended specifically for a particular application and help us to create that file / directory
