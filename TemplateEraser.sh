@@ -17,7 +17,7 @@ function no_available_templates()
     exit 1
 }
 
-function remove_template()
+function remove_template() # (currentTemplateFilename: str)
 {
     rm -r "${template_src_folder:?}/${1:?}" "$(get_template_desktop_path "$1")"
 }

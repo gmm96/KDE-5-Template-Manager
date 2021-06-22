@@ -27,18 +27,18 @@ function exists_template_with_same_name()
     kdialog --error "$(str_exists_template_with_same_name)" --title "$(str_window_title)" --icon "$editor_icon"
 }
 
-function value_by_default_for_new_template_type_radiolist() # args: path to file or directory, type of template
+function value_by_default_for_new_template_type_radiolist() # (pathToFileOrDir: str, templateType: str)
 {
     if [ -f "$1" ] && [ "$2" == "File" ]; then
-        echo "on"
+        printf "on"
     elif [ -d "$1" ] && [ "$2" == "Dir" ]; then
-        echo "on"
+        printf "on"
     else
-        echo "off"
+        printf "off"
     fi
 }
 
-function does_template_exist_with_same_name() { # args: current template path, new template name
+function does_template_exist_with_same_name() { # (currentTemplatePath: str, newTemplateName: str)
     local exists shortname
     exists=1
     for file in "$template_src_folder"/*; do
@@ -86,9 +86,6 @@ while read -r key value; do
 done <<< "$(tail -n +2 "$(get_template_desktop_path "$template_to_edit")")"
 unset IFS
 
-str_open_current_template
-str_update_template
-
 while
     kdialog_select_property=()
     kdialog_select_property+=("$(str_select_property_to_edit)")
@@ -123,7 +120,7 @@ $new_template_original_path" "off")
     kdialog_select_property+=("Save" "__________ $(str_save_and_exit) __________
 " "off")
 
-    [[ -n "$new_template_original_path" ]] && geometry="500x600" || geometry="500x500"
+    [ -n "$new_template_original_path" ] && geometry="500x600" || geometry="500x500"
     if ! property_to_edit=$(kdialog --radiolist "${kdialog_select_property[@]}" --title "$(str_window_title)" --icon "$editor_icon" --geometry "$geometry"); then
         cancel_operation
     fi
@@ -175,7 +172,6 @@ $new_template_original_path" "off")
                         fi
                     fi
                 fi
-                echo "$new_template_original_path"
             fi
             ;;
         "Open_Update")
@@ -185,7 +181,7 @@ $new_template_original_path" "off")
             [ -n "$new_template_original_path" ] && new_template_original_path=""
             ;;
     esac
-    [[ "$property_to_edit" != "Save" ]]
+    [ "$property_to_edit" != "Save" ]
 do true; done
 
 if [ "$(get_filename_wo_extension "${CONFIG["URL"]}")" != "${CONFIG["Name"]}" ] && [ -n "$new_template_original_path" ]; then

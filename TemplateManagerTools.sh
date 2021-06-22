@@ -9,30 +9,33 @@ template_src_folder="$HOME/Templates/source"
 
 desktop_ext=".desktop"
 
-function get_filename()
+function get_filename() # (filePath: str)
 {
     basename -- "$1"
 }
 
-function get_filename_wo_extension()
+function get_filename_wo_extension() # (filePath: str)
 {
+    local filename
     filename="$(get_filename "$1")"
-    if [ -d "$1" ]; then
-        echo "$filename"
-    else
-        echo "${filename%.*}"
+    if [ ! -d "$1" ]; then
+        filename="${filename%.*}"
     fi
+    printf "%s" "$filename"
 }
 
-function get_file_extension()
+function get_file_extension() # (filePath: str)
 {
-    local filename filename_wo_extension
+    local filename filename_wo_extension ext
     filename="$(get_filename "$1")"
     filename_wo_extension="$(get_filename_wo_extension "$1")"
-    echo "${filename#$filename_wo_extension}"
+    ext="${filename#$filename_wo_extension}"
+    printf "%s" "$ext"
 }
 
-function get_template_desktop_path()
+function get_template_desktop_path() # (templatePath: str)
 {
-    echo "$template_folder/$(get_filename_wo_extension "$1")$desktop_ext"
+    local path
+    path="$template_folder/$(get_filename_wo_extension "$1")$desktop_ext"
+    printf "%s" "$path"
 }

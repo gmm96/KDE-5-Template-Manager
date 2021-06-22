@@ -26,8 +26,7 @@ function exists_template_with_same_name()
 # region Main
 
 if [ "$#" -ne 1 ]; then
-    echo "Error: Illegal number of parameters."
-    echo "Use: sh $0 <file/directory>"
+    printf "Error: Illegal number of parameters.\nUse: sh %s <file/directory>\n" "$0"
     exit 1
 elif [ ! -d "$1" ] && [ ! -f "$1" ]; then
     cannot_template
@@ -54,12 +53,12 @@ fi
 template_url="$template_src_folder/$template_name$(get_file_extension "$1")"
 cp -r "$1" "$template_url"
 
-echo "[Desktop Entry]
-Name=$template_name
-Comment=$template_comment
+printf "[Desktop Entry]
+Name=%s
+Comment=%s
 Type=Link
-URL=$template_url
-Icon=$template_icon" > "$template_folder/$template_name$desktop_ext"
+URL=%s
+Icon=%s" "$template_name" "$template_comment" "$template_url" "$template_icon" > "$template_folder/$template_name$desktop_ext"
 
 kdialog --msgbox "$(str_created_template)'$template_name'." --title "$(str_window_title)" --icon "$creator_icon"
 
