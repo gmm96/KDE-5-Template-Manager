@@ -4,8 +4,8 @@ creator_icon="xapp-favorite-symbolic"
 editor_icon="edit"
 eraser_icon="delete"
 
-template_folder="$HOME/Templates"
-template_src_folder="$HOME/Templates/source"
+template_folder="$(xdg-user-dir TEMPLATES)" # Alternatively, place to one of the folders in kf5-config --path templates
+template_src_folder="$(xdg-user-dir TEMPLATES)/source"
 
 desktop_ext=".desktop"
 
