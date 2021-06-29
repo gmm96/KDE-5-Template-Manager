@@ -28,7 +28,6 @@ ServiceTypes=KonqPopupMenu/Plugin;
 X-KDE-ServiceTypes=KonqPopupMenu/Plugin
 MimeType=all/allfiles;inode/directory;
 Actions=TemplateCreator;TemplateEditor;TemplateEraser;
-X-KDE-Priority=TopLevel
 X-KDE-StartupNotify=false
 X-KDE-Submenu=Manage template(s)
 X-KDE-Submenu[es]=Gestionar plantilla(s)
