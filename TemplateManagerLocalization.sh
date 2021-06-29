@@ -550,7 +550,7 @@ function str_edit_icon()
         "pt")
             printf "Edite o ícone";;
         "ru")
-            printf "Отредактируйте значок";;
+            printf "Отредактировать иконку";;
         "nl")
             printf "Bewerk het pictogram";;
         "cs")
@@ -694,7 +694,7 @@ function str_exists_template_with_same_name()
         "pt")
             printf "Existe um modelo existente com exatamente o mesmo. Por favor, tente outro.";;
         "ru")
-            printf "Есть существующий шаблон с точно таким же. Пожалуйста, попробуйте другой.";;
+            printf "Есть существующий шаблон с точно таким же названием. Пожалуйста, попробуйте другой.";;
         "nl")
             printf "Er is een bestaande sjabloon met precies hetzelfde. Probeer een andere.";;
         "cs")
@@ -724,7 +724,7 @@ function str_exists_template_with_same_name()
         "da")
             printf "Der er en eksisterende skabelon med nøjagtig den samme. Prøv en anden.";;
         *)
-            printf "There an existing template with exactly the same same. Please, try another.";;
+            printf "There an existing template with exactly the same name. Please, try another.";;
     esac
 }
 
@@ -838,7 +838,7 @@ function str_discard_new_template()
         "pt")
             printf "Descartar novo arquivo ou diretório de modelo";;
         "ru")
-            printf "Отменить новый файл или каталог шаблона";;
+            printf "Отменить новый шаблон файла или каталога";;
         "nl")
             printf "Nieuw sjabloonbestand of nieuwe map verwijderen";;
         "cs")
@@ -934,7 +934,7 @@ function str_select_new_template_type()
         "pt")
             printf "Selecione o tipo da nova fonte de modelo.";;
         "ru")
-            printf "Выберите тип нового источника шаблона.";;
+            printf "Выберите тип источника нового шаблона.";;
         "nl")
             printf "Selecteer het type van de nieuwe sjabloonbron.";;
         "cs")
@@ -1030,7 +1030,7 @@ function str_directory()
         "pt")
             printf "Diretório";;
         "ru")
-            printf "Каталог";;
+            printf "Папка";;
         "nl")
             printf "Directory";;
         "cs")
@@ -1178,7 +1178,7 @@ function str_select_templates_to_remove()
         "pt")
             printf "Selecione o(s) modelo(s) que deseja remover:";;
         "ru")
-            printf "Выберите шаблон (ы), который вы хотите удалить:";;
+            printf "Выберите шаблон(ы), которые хотите удалить:";;
         "nl")
             printf "Selecteer één of meerdere te verwijderen sjablonen:";;
         "cs")
