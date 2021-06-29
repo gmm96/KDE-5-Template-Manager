@@ -73,7 +73,7 @@ case "${lang_arr[0]:0:2}" in
     "pt")
         success="O plugin do gerenciador de modelos do KDE 5 foi desinstalado com sucesso.";;
     "ru")
-        success="Плагин KDE 5 Template Manager успешно установлен.";;
+        success="Плагин KDE 5 Template Manager успешно удалён.";;
     "nl")
         success="De KDE 5-sjabloonbeheerplug-in is verwijderd.";;
     "cs")
