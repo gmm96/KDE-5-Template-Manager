@@ -4,8 +4,22 @@ creator_icon="xapp-favorite-symbolic"
 editor_icon="edit"
 eraser_icon="delete"
 
-template_folder="$HOME/Templates"
-template_src_folder="$HOME/Templates/source"
+if [ "$(xdg-user-dir TEMPLATES)" != "$HOME" ]; then
+    template_folder="$(xdg-user-dir TEMPLATES)"
+else
+    IFS=':' read -ra template_possible_folders <<< "$(kf5-config --path templates)"
+    counter=0
+    unset template_folder
+    while [ $counter -lt ${#template_possible_folders[@]} ] && [ -z "$template_folder" ]; do
+        path="$(realpath "${template_possible_folders[$counter]}")"
+        if [ "${path##$HOME}" != "${path}" ]; then
+            template_folder="$path"
+        fi
+        ((counter++))
+    done
+fi
+
+template_src_folder="$template_folder/source"
 
 desktop_ext=".desktop"
 
