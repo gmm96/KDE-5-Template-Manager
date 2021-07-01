@@ -78,7 +78,7 @@ Name[is]=Búðu til sniðmát úr þessum hlut
 Name[el]=Δημιουργία προτύπου από αυτό το αντικείμενο
 Name[hu]=Hozzon létre sablont erről az objektumról
 Name[da]=Opret skabelon ud fra dette objekt
-Icon=xapp-favorite-symbolic
+Icon=favorite
 Exec=$HOME/.bin/TemplateCreator.sh %f
 Encoding=UTF-8
 

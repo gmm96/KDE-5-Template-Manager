@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # shellcheck source=./TemplateManagerLocalization.sh
-. "$HOME/.bin/TemplateManagerLocalization.sh"
+. "$bin_dir/TemplateManagerLocalization.sh"
 # shellcheck source=./TemplateManagerTools.sh
-. "$HOME/.bin/TemplateManagerTools.sh"
+. "$bin_dir/TemplateManagerTools.sh"
 
 function cancel_operation()
 {
@@ -51,7 +51,7 @@ if ! template_icon=$(kdialog --geticon MimeType --title "$(str_window_title)" --
 fi
 
 template_url="$template_src_folder/$template_name$(get_file_extension "$1")"
-cp -r "$1" "$template_url"
+/bin/cp -r "$1" "$template_url"
 
 printf "[Desktop Entry]
 Name=%s

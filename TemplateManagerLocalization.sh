@@ -3,7 +3,8 @@
 locales_arr=("${LANGUAGE//:/}")
 first_locale="${locales_arr[0]:0:2}"
 
-function str_window_title() {
+function str_window_title()
+{
     case "$first_locale" in
         "es")
             printf "Administrador de plantillas";;
@@ -49,6 +50,158 @@ function str_window_title() {
             printf "Template manager";;
     esac
 }
+
+# region install
+
+function str_installed()
+{
+    case "$first_locale" in
+        "es")
+            printf "Plugin Administrador de Plantillas para KDE 5 instalado existosamente.";;
+        "fr")
+            printf "Le plugin KDE 5 Template Manager a été installé avec succès.";;
+        "it")
+            printf "Il plugin KDE 5 Template Manager installato con successo.";;
+        "de")
+            printf "KDE 5 Template Manager Plugin erfolgreich installiert.";;
+        "pt")
+            printf "O plugin do gerenciador de modelos do KDE 5 foi instalado com sucesso.";;
+        "ru")
+            printf "Плагин KDE 5 Template Manager успешно установлен.";;
+        "nl")
+            printf "De KDE 5-sjabloonbeheerplug-in is geïnstalleerd.";;
+        "cs")
+            printf "Plugin Správce šablon KDE 5 byl úspěšně nainstalován.";;
+        "pl")
+            printf "Wtyczka menedżera szablonów KDE 5 pomyślnie zainstalowana.";;
+        "ro")
+            printf "KDE 5 Template Manager Plugin a fost instalat cu succes.";;
+        "et")
+            printf "KDE 5 mallihalduri pistikprogrammi installimine õnnestus.";;
+        "fi")
+            printf "KDE 5 Template Manager -laajennuksen asennus onnistui.";;
+        "sv")
+            printf "KDE 5 Template Manager Plugin har installerats.";;
+        "nb" | "nn" | "no")
+            printf "KDE 5 Template Manager Plugin er installert.";;
+        "tr")
+            printf "KDE 5 Template Manager Eklentisi başarıyla kuruldu.";;
+        "uk")
+            printf "Плагін KDE 5 Template Manager успішно встановлено.";;
+        "is")
+            printf "Tappi KDE 5 sniðmátastjóra var sett upp.";;
+        "el")
+            printf "Η προσθήκη KDE 5 Template Manager εγκαταστάθηκε με επιτυχία.";;
+        "hu")
+            printf "A KDE 5 Template Manager beépülő modul sikeresen telepítve.";;
+        "da")
+            printf "KDE 5 Template Manager Plugin er installeret.";;
+        *)
+            printf "KDE 5 Template Manager Plugin successfully installed.";;
+    esac
+}
+
+# endregion
+
+# region uninstall
+
+function str_uninstall_confirmation_msg()
+{
+    case "$first_locale" in
+        "es")
+            printf "¿Desea eliminar también las plantillas existentes? Esta acción no se podrá deshacer.";;
+        "fr")
+            printf "Voulez-vous également supprimer les modèles existants? Cette action ne peut pas être annulée.";;
+        "it")
+            printf "Vuoi anche rimuovere i modelli esistenti? Questa azione non può essere annullata.";;
+        "de")
+            printf "Möchten Sie auch die vorhandenen Vorlagen entfernen? Diese Aktion kann nicht rückgängig gemacht werden.";;
+        "pt")
+            printf "Você também deseja remover os modelos existentes? Essa ação não pode ser desfeita.";;
+        "ru")
+            printf "Вы также хотите удалить существующие шаблоны? Это действие не может быть отменено.";;
+        "nl")
+            printf "Wilt u tevens de reeds gemaakte sjablonen verwijderen? Dit kan niet ongedaan worden gemaakt.";;
+        "cs")
+            printf "Chcete také odstranit stávající šablony? Tuto akci nelze vrátit zpět.";;
+        "pl")
+            printf "Czy chcesz również usunąć istniejące szablony? Tej czynności nie można cofnąć.";;
+        "ro")
+            printf "Doriți, de asemenea, să eliminați șabloanele existente? Această acțiune nu poate fi anulată.";;
+        "et")
+            printf "Kas soovite ka olemasolevad mallid eemaldada? Seda toimingut ei saa tagasi võtta.";;
+        "fi")
+            printf "Haluatko myös poistaa olemassa olevat mallit? Tätä toimintoa ei voi kumota.";;
+        "sv")
+            printf "Vill du också ta bort befintliga mallar? Denna åtgärd kan inte ångras.";;
+        "nb" | "nn" | "no")
+            printf "Vil du også fjerne de eksisterende malene? Denne handlingen kan ikke angres.";;
+        "tr")
+            printf "Mevcut şablonları da kaldırmak istiyor musunuz? Bu işlem geri alınamaz.";;
+        "uk")
+            printf "Ви також хочете видалити існуючі шаблони? Цю дію не можна скасувати.";;
+        "is")
+            printf "Viltu líka fjarlægja núverandi sniðmát? Ekki er hægt að afturkalla þessa aðgerð.";;
+        "el")
+            printf "Θέλετε επίσης να καταργήσετε τα υπάρχοντα πρότυπα; Αυτή η πράξη δε μπορεί να αναιρεθεί.";;
+        "hu")
+            printf "El akarja távolítani a meglévő sablonokat is? Ez a művelet nem visszavonható.";;
+        "da")
+            printf "Vil du også fjerne de eksisterende skabeloner? Denne handling kan ikke fortrydes.";;
+        *)
+            printf "Do you also want to remove the existing templates? This action cannot be undone.";;
+    esac
+}
+
+function str_uninstalled()
+{
+    case "$first_locale" in
+        "es")
+            printf "Plugin Administrador de Plantillas para KDE 5 desinstalado existosamente.";;
+        "fr")
+            printf "Le plugin KDE 5 Template Manager a été désinstallé avec succès.";;
+        "it")
+            printf "Il plugin KDE 5 Template Manager è stato disinstallato correttamente.";;
+        "de")
+            printf "KDE 5 Template Manager Plugin erfolgreich deinstalliert.";;
+        "pt")
+            printf "O plugin do gerenciador de modelos do KDE 5 foi desinstalado com sucesso.";;
+        "ru")
+            printf "Плагин KDE 5 Template Manager успешно удалён.";;
+        "nl")
+            printf "De KDE 5-sjabloonbeheerplug-in is verwijderd.";;
+        "cs")
+            printf "Plugin Správce šablon KDE 5 byl úspěšně odinstalován.";;
+        "pl")
+            printf "Wtyczka KDE 5 Template Manager została pomyślnie odinstalowana.";;
+        "ro")
+            printf "KDE 5 Template Manager Plugin dezinstalat cu succes.";;
+        "et")
+            printf "KDE 5 mallihalduri pistikprogrammi desinstallimine õnnestus.";;
+        "fi")
+            printf "KDE 5 Template Manager -laajennuksen asennus onnistui.";;
+        "sv")
+            printf "Plugin-programmet KDE 5 Template Manager avinstallerades.";;
+        "nb" | "nn" | "no")
+            printf "KDE 5 Template Manager Plugin ble avinstallert.";;
+        "tr")
+            printf "KDE 5 Template Manager Eklentisi başarıyla kaldırıldı.";;
+        "uk")
+            printf "Ви Плагін KDE 5 Template Manager успішно видалено.";;
+        "is")
+            printf "Tappi KDE 5 sniðmátsstjóra tókst að fjarlægja.";;
+        "el")
+            printf "Η εγκατάσταση του KDE 5 Template Manager απεγκαταστάθηκε με επιτυχία.";;
+        "hu")
+            printf "A KDE 5 Template Manager beépülő modul sikeresen eltávolítva.";;
+        "da")
+            printf "KDE 5 Template Manager Plugin blev afinstalleret.";;
+        *)
+            printf "KDE 5 Template Manager Plugin successfully uninstalled.";;
+    esac
+}
+
+# endregion
 
 # region TemplateCreator
 

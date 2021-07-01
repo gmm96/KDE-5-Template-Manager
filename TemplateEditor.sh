@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # shellcheck source=./TemplateManagerLocalization.sh
-. "$HOME/.bin/TemplateManagerLocalization.sh"
+. "$bin_dir/TemplateManagerLocalization.sh"
 # shellcheck source=./TemplateManagerTools.sh
-. "$HOME/.bin/TemplateManagerTools.sh"
+. "$bin_dir/TemplateManagerTools.sh"
 
 function cancel_operation()
 {
@@ -80,11 +80,9 @@ if ! template_to_edit=$(kdialog --radiolist "${kdialog_select_template[@]}" --ti
 fi
 
 declare -A CONFIG
-IFS="="
-while read -r key value; do
+while IFS="=" read -r key value; do
     CONFIG[$key]=$value
 done <<< "$(tail -n +2 "$(get_template_desktop_path "$template_to_edit")")"
-unset IFS
 
 while
     kdialog_select_property=()
@@ -168,7 +166,7 @@ $new_template_original_path" "off")
                 if [ -n "$new_template_original_path" ]; then
                     if kdialog --warningyesno "$(str_backup_confirmation)" --title "$(str_window_title)" --icon "$editor_icon"; then
                         if backup_path=$(kdialog --getsavefilename "$HOME/$(get_filename "${CONFIG["URL"]}")"); then
-                            cp -r "${CONFIG["URL"]}" "$backup_path"
+                            /bin/cp -r "${CONFIG["URL"]}" "$backup_path"
                         fi
                     fi
                 fi
@@ -188,7 +186,7 @@ if [ "$(get_filename_wo_extension "${CONFIG["URL"]}")" != "${CONFIG["Name"]}" ] 
     rm "$(get_template_desktop_path "${CONFIG["URL"]}")"
     rm -r "${CONFIG["URL"]}"
     new_path="$template_src_folder/${CONFIG["Name"]}$(get_file_extension "$new_template_original_path")"
-    cp -r "$new_template_original_path" "$new_path"
+    /bin/cp -r "$new_template_original_path" "$new_path"
     CONFIG["URL"]="$new_path"
 elif [ "$(get_filename_wo_extension "${CONFIG["URL"]}")" != "${CONFIG["Name"]}" ]; then
     rm "$(get_template_desktop_path "${CONFIG["URL"]}")"
@@ -198,7 +196,7 @@ elif [ "$(get_filename_wo_extension "${CONFIG["URL"]}")" != "${CONFIG["Name"]}" 
 elif [ -e "$new_template_original_path" ]; then
     rm -r "${CONFIG["URL"]}"
     new_path="$template_src_folder/${CONFIG["Name"]}$(get_file_extension "$new_template_original_path")"
-    cp -r "$new_template_original_path" "$new_path"
+    /bin/cp -r "$new_template_original_path" "$new_path"
     CONFIG["URL"]="$new_path"
 fi
 

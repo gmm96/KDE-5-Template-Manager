@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # shellcheck source=./TemplateManagerLocalization.sh
-. "$HOME/.bin/TemplateManagerLocalization.sh"
+. "$bin_dir/TemplateManagerLocalization.sh"
 # shellcheck source=./TemplateManagerTools.sh
-. "$HOME/.bin/TemplateManagerTools.sh"
+. "$bin_dir/TemplateManagerTools.sh"
 
 function cancel_operation()
 {
