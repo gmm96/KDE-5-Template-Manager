@@ -18,11 +18,11 @@ else
         path="$(realpath "${template_installation_paths[$counter]}")"
         if [ "${path##$HOME}" != "${path}" ]; then
             template_folder="$path"
-            template_src_folder="$template_folder/source"
         fi
         ((counter++))
     done
 fi
+template_src_folder="$template_folder/source"
 
 IFS=':' read -ra service_installation_paths <<< "$(kf5-config --path services)"
 counter=0
