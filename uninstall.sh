@@ -12,7 +12,8 @@ rm "$bin_dir/TemplateManagerLocalization.sh"
 rm "$bin_dir/TemplateManagerTools.sh"
 rmdir "$bin_dir"
 
-rm "$service_folder/TemplateManager.desktop"
+rm "$service_folder/TemplateManager_File.desktop"
+rm "$service_folder/TemplateManager_Dir.desktop"
 
 if kdialog --warningyesno "$(str_uninstall_confirmation_msg)" --title "$(str_window_title)" --icon "$creator_icon"; then
     rm -r "${template_folder:?}/"*
