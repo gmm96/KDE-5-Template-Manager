@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # shellcheck source=./TemplateManagerLocalization.sh
-. "$bin_dir/TemplateManagerLocalization.sh"
+. "$HOME/.bin/TemplateManagerLocalization.sh"
 # shellcheck source=./TemplateManagerTools.sh
-. "$bin_dir/TemplateManagerTools.sh"
+. "$HOME/.bin/TemplateManagerTools.sh"
 
 function cancel_operation()
 {
@@ -19,7 +19,7 @@ function cannot_template()
 
 function exists_template_with_same_name()
 {
-    kdialog --error "$(str_exists_template_with_same_name)" --title "$(str_window_title)" --icon "$editor_icon"
+    kdialog --error "$(str_exists_template_with_same_name)" --title "$(str_window_title)" --icon "$creator_icon"
 }
 
 
