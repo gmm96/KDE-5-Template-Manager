@@ -47,10 +47,10 @@ If you don't like it, you can **uninstall** it by running:
 ## Usage
 
 It is quite easy to use this plugin. To **create a template**, just select the file(s) / directory(ies) you want to 
-use as template, do right-click and choose the option ***Manage template(s)* -> *Create template from this object***. 
-Then enter the info asked by the dialogs that will appear and everything should be ok. Parameters name and icon 
-are required, but comment is optional. When the template is created, you can use it by doing right-click, select 
-*Create new* menu and choose the template you want to use.
+use as template, do right-click and choose the option ***Manage template(s)* -> *Create template from this 
+file/directory***. Then enter the info asked by the dialogs that will appear and everything should be ok. 
+Parameters name and icon are required, but comment is optional. When the template is created, you can use 
+it by doing right-click, select *Create new* menu and choose the template you want to use.
 
 You may need to **edit a template**, so you can use this tool. No need to select any file, just do right-click and 
 select ***Manage template(s)* -> *Edit existing template...***. Then, you should select the template you want to edit,
