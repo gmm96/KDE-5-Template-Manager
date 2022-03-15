@@ -36,6 +36,8 @@ If you want to help me to add support for more languages, you are free to create
 
 ## Installation
 
+Firstly, install **Kdialog**, as it is the only **dependency** this plugin has.
+
 Download the package, extract it and run the following command to **install** this Dolphin Service. 
 
     ./install.sh
@@ -50,7 +52,8 @@ It is quite easy to use this plugin. To **create a template**, just select the f
 use as template, do right-click and choose the option ***Manage template(s)* -> *Create template from this 
 file/directory***. Then enter the info asked by the dialogs that will appear and everything should be ok. 
 Parameters name and icon are required, but comment is optional. When the template is created, you can use 
-it by doing right-click, select *Create new* menu and choose the template you want to use.
+it by doing right-click, select *Create new* menu and choose the template you want to use. The template will keep
+the same permissions that the original file has. This is quite useful if you want to template scripts or executables.
 
 You may need to **edit a template**, so you can use this tool. No need to select any file, just do right-click and 
 select ***Manage template(s)* -> *Edit existing template...***. Then, you should select the template you want to edit,
