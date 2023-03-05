@@ -6,17 +6,20 @@
 mkdir -p ~/.local/bin
 mkdir -p "$template_src_folder"
 
+bindir="~/.local/bin"
+servicedir="~/.local/share/kservices5/ServiceMenus"
 
-/bin/cp "./TemplateCreator.sh" ~/.local/bin
-/bin/cp "./TemplateEditor.sh" ~/.local/bin
-/bin/cp "./TemplateEraser.sh" ~/.local/bin
-/bin/cp "./TemplateManagerLocalization.sh" ~/.local/bin
-/bin/cp "./TemplateManagerTools.sh" ~/.local/bin
-chmod +x "~/.local/bin/TemplateCreator.sh"
-chmod +x "~/.local/bin/TemplateEditor.sh"
-chmod +x "~/.local/bin/TemplateEraser.sh"
 
-/bin/cp "./TemplateManager_File.desktop" ~/.local/share/kservices5/ServiceMenus/
-/bin/cp "./TemplateManager_Dir.desktop" ~/.local/share/kservices5/ServiceMenus/
+/bin/cp "./TemplateCreator.sh" $bindir
+/bin/cp "./TemplateEditor.sh" $bindir
+/bin/cp "./TemplateEraser.sh" $bindir
+/bin/cp "./TemplateManagerLocalization.sh" $bindir
+/bin/cp "./TemplateManagerTools.sh" $bindir
+chmod +x "$bindir/TemplateCreator.sh"
+chmod +x "$bindirTemplateEditor.sh"
+chmod +x "$bindir/TemplateEraser.sh"
+
+/bin/cp "./TemplateManager_File.desktop" $servicedir
+/bin/cp "./TemplateManager_Dir.desktop" $servicedir
 
 kdialog --msgbox "$(str_installed)" --title "$(str_window_title)" --icon "$creator_icon"
