@@ -36,10 +36,13 @@ If you want to help me to add support for more languages, you are free to create
 
 ## Installation
 
-Firstly, install **Kdialog**, as it is the only **dependency** this plugin has.
+First, make sure **Kdialog** is installed, as it is the only **dependency** this plugin has. Just run `kdialog` in Terminal to check.
+
 
 Download the package, extract it and run the following command to **install** this Dolphin Service. 
 
+    git clone https://github.com/gmm96/KDE-5-Template-Manager.git
+    cd KDE-5-Template-Manager
     ./install.sh
 
 If you don't like it, you can **uninstall** it by running:
