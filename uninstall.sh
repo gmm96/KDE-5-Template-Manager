@@ -3,16 +3,16 @@
 . ./TemplateManagerTools.sh
 . ./TemplateManagerLocalization.sh
 
-bindir="~/.local/bin"
+bin_dir="~/.local/bin"
 servicedir="~/.local/share/kservices5/ServiceMenus"
 
 rmdir "$template_src_folder"
 
-rm "$bindir/TemplateCreator.sh"
-rm "$bindir/TemplateEditor.sh"
-rm "$bindir/TemplateEraser.sh"
-rm "$bindir/TemplateManagerLocalization.sh"
-rm "$bindir/TemplateManagerTools.sh"
+rm "$bin_dir/TemplateCreator.sh"
+rm "$bin_dir/TemplateEditor.sh"
+rm "$bin_dir/TemplateEraser.sh"
+rm "$bin_dir/TemplateManagerLocalization.sh"
+rm "$bin_dir/TemplateManagerTools.sh"
 
 rm "$servicedir/TemplateManager_File.desktop"
 rm "$servicedir/TemplateManager_Dir.desktop"
