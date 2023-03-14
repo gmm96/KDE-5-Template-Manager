@@ -17,6 +17,11 @@ file format intended specifically for a particular application and help us to cr
 automatically. They are supported by Desktop Environments and File Managers used in most of the Linux
 distributions.
 
+### Common example:
+![Screenshot](https://github.com/trytomakeyouprivate/KDE-5-Template-Manager/blob/main/screenshots/dolphin-template.png)
+
+The Libreoffice Flatpak has no "create Libreoffice ..." entries in Dolphin, which is pretty annoying. Using templates you can add these without a problem.
+
 *KDE 5 Plasma* and *Dolphin* also support them, but you have to create a **.desktop* file manually 
 to create the template, which has a difficult syntax to remember. The goal of this project is to 
 create a **Dolphin Service Menu for building templates automatically** just by selecting the
