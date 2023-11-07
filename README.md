@@ -30,16 +30,25 @@ Swedish, Norwegian, Turkish, Danish, Ukrainian, Hungarian, Icelandic and Greek l
 translated using Google Translator, so some mistakes may appear in texts. If user language is not in the list, 
 English language will be selected by default. 
 
+### Common example
+![Screenshot](https://github.com/trytomakeyouprivate/KDE-5-Template-Manager/blob/main/screenshots/dolphin-template.png)
+
+The Libreoffice Flatpak has no "create Libreoffice ..." entries in Dolphin, which is pretty annoying. Using templates you can add these without a problem.
+
+### Translations
 If you want to help me to add support for more languages, you are free to create a Pull Request modifying file 
 **TemplateManagerLocalization.sh** with the new translations, or you can contact me by telegram: 
 [@supremoh](https://t.me/supremoh).
 
 ## Installation
 
-Firstly, install **Kdialog**, as it is the only **dependency** this plugin has.
+First, make sure **Kdialog** is installed, as it is the only **dependency** this plugin has. Just run `kdialog` in Terminal to check.
+
 
 Download the package, extract it and run the following command to **install** this Dolphin Service. 
 
+    git clone https://github.com/gmm96/KDE-5-Template-Manager.git
+    cd KDE-5-Template-Manager
     ./install.sh
 
 If you don't like it, you can **uninstall** it by running:
